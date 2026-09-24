@@ -31,6 +31,9 @@ yarn-error.log*
 Thumbs.db
 desktop.ini
 
+# WorkBuddy 本地工作数据
+.workbuddy/
+
 # 临时文件
 *.tmp
 *.bak
