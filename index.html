@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serena 的博客 · 首页</title>
+  <meta name="description" content="一个记录学习、生活与思考的个人博客。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">S</span>
+        <span>Serena 的博客</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="active">首页</a>
+        <a href="archive.html">归档</a>
+        <a href="about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container layout">
+
+      <!-- 侧边个人卡片 -->
+      <aside class="profile">
+        <div class="avatar">S</div>
+        <h1>Serena</h1>
+        <p class="tagline">前端学习者 / 记录与分享</p>
+        <p class="profile-bio">
+          你好，欢迎来到我的小站。这里主要记录我在前端学习路上的踩坑与收获，也会写一些生活随笔。写得不好，请多包涵。
+        </p>
+        <div class="profile-stats">
+          <div><strong>4</strong><span>文章</span></div>
+          <div><strong>3</strong><span>分类</span></div>
+          <div><strong>2026</strong><span>始于</span></div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Serena-0223" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A7.99 7.99 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          </a>
+          <a href="mailto:example@example.com" aria-label="邮箱">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 3h13a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5ZM2 4.2v.05l6 3.4 6-3.4V4.2l-6 3.4L2 4.2ZM2.6 5 2 5.35V11.5h12V5.35L8.47 8.4a.5.5 0 0 1-.94 0L2.6 5Z"/></svg>
+          </a>
+          <a href="#" aria-label="RSS 订阅">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 12a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM2 8.2v2.05a5.75 5.75 0 0 1 5.75 5.75h2.05A7.8 7.8 0 0 0 2 8.2ZM2 3v2.05A10.95 10.95 0 0 1 12.95 16H15A13 13 0 0 0 2 3Z"/></svg>
+          </a>
+        </div>
+      </aside>
+
+      <!-- 文章列表 -->
+      <section>
+        <div class="section-head">
+          <h2>最新文章</h2>
+          <span class="count">共 4 篇</span>
+        </div>
+        <p class="section-desc">记录学习过程、工具用法和一些零散的想法。</p>
+
+        <div class="filter-bar" id="filter-bar">
+          <button class="filter-btn active" type="button" data-filter="all">全部</button>
+          <button class="filter-btn" type="button" data-filter="前端">前端</button>
+          <button class="filter-btn" type="button" data-filter="工具">工具</button>
+          <button class="filter-btn" type="button" data-filter="随笔">随笔</button>
+        </div>
+
+        <ul class="post-list" id="post-list">
+          <li class="post-card" data-tags="随笔">
+            <h3><a href="posts/hello-world.html">开始写博客的第一天</a></h3>
+            <div class="post-meta">
+              <time datetime="2026-09-17">2026-09-17</time>
+              <span class="dot"></span><span>4 分钟阅读</span>
+            </div>
+            <p class="post-excerpt">
+              终于把这个博客搭起来了。说起来惭愧，这件事我在心里盘算了很久，一直觉得「等准备好了再开始」，结果就是一直没开始……
+            </p>
+            <div class="tag-list">
+              <a class="tag" href="archive.html">随笔</a>
+            </div>
+          </li>
+
+          <li class="post-card" data-tags="前端">
+            <h3><a href="posts/css-flexbox-grid.html">从零理解 Flexbox 与 Grid</a></h3>
+            <div class="post-meta">
+              <time datetime="2026-09-15">2026-09-15</time>
+              <span class="dot"></span><span>9 分钟阅读</span>
+            </div>
+            <p class="post-excerpt">
+              很长一段时间里，我对布局的理解停留在「能用就行」——Flex 不行就换 Grid，都不行就加个 margin 硬凑。直到认真梳理了一遍才发现，两者的分工其实非常清晰。
+            </p>
+            <div class="tag-list">
+              <a class="tag" href="archive.html">前端</a>
+              <a class="tag tag-neutral" href="archive.html">CSS</a>
+            </div>
+          </li>
+
+          <li class="post-card" data-tags="工具">
+            <h3><a href="posts/git-commands.html">Git 常用命令清单</a></h3>
+            <div class="post-meta">
+              <time datetime="2026-09-12">2026-09-12</time>
+              <span class="dot"></span><span>6 分钟阅读</span>
+            </div>
+            <p class="post-excerpt">
+              日常开发里真正高频使用的 Git 命令其实不超过二十个。把最常用的整理成一份清单，忘了的时候翻一翻，比每次都去搜要快得多。
+            </p>
+            <div class="tag-list">
+              <a class="tag" href="archive.html">工具</a>
+              <a class="tag tag-neutral" href="archive.html">Git</a>
+            </div>
+          </li>
+
+          <li class="post-card" data-tags="工具">
+            <h3><a href="posts/markdown-guide.html">Markdown 写作速查手册</a></h3>
+            <div class="post-meta">
+              <time datetime="2026-09-10">2026-09-10</time>
+              <span class="dot"></span><span>5 分钟阅读</span>
+            </div>
+            <p class="post-excerpt">
+              Markdown 的语法简单到「五分钟就能学会」，但真到写的时候，总有几个语法记不住。这里把常用的整理出来，方便随时查阅。
+            </p>
+            <div class="tag-list">
+              <a class="tag" href="archive.html">工具</a>
+              <a class="tag tag-neutral" href="archive.html">Markdown</a>
+            </div>
+          </li>
+        </ul>
+
+        <p class="empty-state" id="empty-state" hidden>这个分类下还没有文章。</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Serena · 用 HTML &amp; CSS 手写</span>
+      <span><a href="archive.html">归档</a> · <a href="about.html">关于</a></span>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

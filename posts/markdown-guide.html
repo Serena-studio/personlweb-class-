@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown 写作速查手册 · Serena 的博客</title>
+  <meta name="description" content="把常用的 Markdown 语法整理出来，方便随时查阅。">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark">S</span>
+        <span>Serena 的博客</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="../index.html">首页</a>
+        <a href="../archive.html">归档</a>
+        <a href="../about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <article class="article">
+
+        <nav class="breadcrumb">
+          <a href="../index.html">首页</a> / <a href="../archive.html">归档</a> / <span>正文</span>
+        </nav>
+
+        <header class="article-header">
+          <h1>Markdown 写作速查手册</h1>
+          <div class="post-meta">
+            <time datetime="2026-09-10">2026 年 9 月 10 日</time>
+            <span class="dot"></span><span>约 5 分钟</span>
+            <span class="dot"></span><a href="../archive.html">工具</a>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p>
+            Markdown 的语法简单到「五分钟就能学会」，但真到写的时候，
+            总有几个语法记不住——尤其是表格和嵌套列表。
+            这里把常用的整理出来，方便随时查阅。
+          </p>
+
+          <h2>标题</h2>
+
+          <p>用 <code>#</code> 的数量表示层级，一到六级：</p>
+
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题</code></pre>
+
+          <p>
+            建议一篇文章只用一个一级标题，其余从二级开始。
+            层级跳着用（比如二级直接接四级）虽然能渲染，但语义上不太规范。
+          </p>
+
+          <h2>强调</h2>
+
+<pre><code>*斜体*  或  _斜体_
+**粗体** 或  __粗体__
+***粗斜体***
+~~删除线~~</code></pre>
+
+          <p>渲染效果：<em>斜体</em>、<strong>粗体</strong>、<del>删除线</del>。</p>
+
+          <h2>列表</h2>
+
+          <h3>无序列表</h3>
+
+<pre><code>- 苹果
+- 香蕉
+  - 香蕉的子类（缩进两个空格）
+- 橙子</code></pre>
+
+          <p>嵌套的关键是<strong>缩进两个空格</strong>，缩进不对就会变成同级。</p>
+
+          <h3>有序列表</h3>
+
+<pre><code>1. 第一步
+2. 第二步
+3. 第三步</code></pre>
+
+          <h3>任务列表</h3>
+
+<pre><code>- [x] 已完成的任务
+- [ ] 未完成的任务</code></pre>
+
+          <h2>链接与图片</h2>
+
+<pre><code>[链接文字](https://example.com)
+[带标题的链接](https://example.com "鼠标悬停显示")
+
+![图片描述](https://example.com/img.png)</code></pre>
+
+          <p>
+            图片描述（alt 文本）最好写上。它对无障碍阅读有用，
+            图片加载失败时也能显示这段文字。
+          </p>
+
+          <h2>引用</h2>
+
+<pre><code>&gt; 这是一段引用。
+&gt;
+&gt; 可以有多行，也可以嵌套：
+&gt; &gt; 嵌套的引用</code></pre>
+
+          <blockquote>
+            <p>渲染出来就是这样的效果，通常用来放摘录或补充说明。</p>
+          </blockquote>
+
+          <h2>代码</h2>
+
+          <h3>行内代码</h3>
+
+          <p>用一个反引号包裹：<code>git status</code>。</p>
+
+          <h3>代码块</h3>
+
+          <p>用<strong>三个反引号</strong>包裹，并在开头指定语言以获得语法高亮：</p>
+
+<pre><code>```javascript
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+```</code></pre>
+
+          <p>效果：</p>
+
+<pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}</code></pre>
+
+          <p>
+            如果代码里本身含有反引号，可以用<strong>四个反引号</strong>包裹外层。
+          </p>
+
+          <h2>表格</h2>
+
+          <p>这是最容易写错的语法，注意第二行的分隔部分：</p>
+
+<pre><code>| 语言 | 类型 | 年份 |
+| :--- | :--: | ---: |
+| JavaScript | 动态 | 1995 |
+| TypeScript | 静态 | 2012 |</code></pre>
+
+          <p>第二行的冒号控制对齐方向：</p>
+
+          <ul>
+            <li><code>:---</code> 左对齐（默认）</li>
+            <li><code>:--:</code> 居中</li>
+            <li><code>---:</code> 右对齐</li>
+          </ul>
+
+          <p>渲染结果：</p>
+
+          <table>
+            <thead>
+              <tr><th>语言</th><th>类型</th><th>年份</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>JavaScript</td><td>动态</td><td>1995</td></tr>
+              <tr><td>TypeScript</td><td>静态</td><td>2012</td></tr>
+            </tbody>
+          </table>
+
+          <h2>分割线</h2>
+
+<pre><code>---
+或
+***
+或
+___</code></pre>
+
+          <hr>
+
+          <p>就是上面这条线。三种写法等价，选一个保持全文统一就行。</p>
+
+          <h2>几个实用的细节</h2>
+
+          <h3>1. 换行</h3>
+
+          <p>
+            在 Markdown 里，单个回车不会产生换行，会被合并成一行。
+            要强制换行，可以在行末加<strong>两个空格</strong>，
+            或者直接空一行分段。
+          </p>
+
+          <h3>2. 转义特殊字符</h3>
+
+          <p>
+            如果想显示 <code>*</code>、<code>#</code> 这些符号本身而不是让它们生效，
+            在前面加反斜杠：<code>\*</code>、<code>\#</code>。
+          </p>
+
+          <h3>3. 写 URL 用尖括号</h3>
+
+<pre><code>&lt;https://example.com&gt;</code></pre>
+
+          <p>这样链接会自动识别，不需要额外的方括号。</p>
+
+          <h2>小结</h2>
+
+          <ul>
+            <li>日常写作用到的大概就这些：标题、列表、链接、代码、引用、表格</li>
+            <li>表格和嵌套列表最容易写错，注意缩进和分隔行</li>
+            <li>不确定效果时，写一段就预览一下，别攒到最后</li>
+          </ul>
+
+          <p>
+            熟练之后基本不用想，敲起来比用富文本编辑器点按钮快很多。
+          </p>
+        </div>
+
+        <footer class="article-footer">
+          <div class="tag-list">
+            <a class="tag" href="../archive.html">工具</a>
+            <a class="tag tag-neutral" href="../archive.html">Markdown</a>
+          </div>
+
+          <nav class="post-nav">
+            <span></span>
+            <a href="git-commands.html" class="next">
+              <span class="label">下一篇 →</span>
+              <span class="title">Git 常用命令清单</span>
+            </a>
+          </nav>
+        </footer>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Serena · 用 HTML &amp; CSS 手写</span>
+      <span><a href="../archive.html">归档</a> · <a href="../about.html">关于</a></span>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="回到顶部">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
