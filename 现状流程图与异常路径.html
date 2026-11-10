@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>现状流程图与异常路径 · 上海外综服 · 进出口代理单证一致性</title>
+<style>
+  body{margin:0;padding:32px;background:#f7f6f1;font:15px/1.7 "Microsoft YaHei",sans-serif;color:#2b3a33;}
+  .wrap{max-width:1180px;margin:0 auto;background:#fffdf7;border:1px solid #e3ddcc;border-radius:12px;padding:36px 40px;}
+  h1{font-size:22px;margin:0 0 4px;}
+  .sub{color:#7a7a6c;font-size:13px;margin-bottom:24px;}
+  .legend{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 20px;font-size:13px;}
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .sw{width:16px;height:16px;border-radius:4px;display:inline-block;}
+  svg{display:block;width:100%;height:auto;}
+  .foot{margin-top:22px;padding-top:14px;border-top:1px dashed #d8d2c0;font-size:12.5px;color:#6f6f62;}
+  @media print{body{background:#fff;padding:0}.wrap{border:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>现状流程图与异常路径</h1>
+  <div class="sub">项目：上海外综服国际贸易有限公司 · 进出口代理单证一致性 · 围绕最近一单（合成演练，只读核对与人工交接口径）</div>
+
+  <div class="legend">
+    <span><span class="sw" style="background:#2f5d50"></span>主流程</span>
+    <span><span class="sw" style="background:#fff;border:2px solid #c2502a"></span>异常路径</span>
+    <span><span class="sw" style="background:#fbe9d7;border:1px solid #d9925f"></span>瓶颈点</span>
+    <span><span class="sw" style="background:#eef2ec;border:1px dashed #9aa89b"></span>待核实</span>
+  </div>
+
+  <svg viewBox="0 0 1120 640" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei,sans-serif">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#2f5d50"/>
+      </marker>
+      <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#c2502a"/>
+      </marker>
+    </defs>
+
+    <!-- ===== 主流程 ===== -->
+    <text x="30" y="52" font-size="15" font-weight="bold" fill="#2f5d50">主流程（顾明岚确认口径 · f01 链路五段）</text>
+
+    <!-- 触发 -->
+    <rect x="30" y="80" width="150" height="76" rx="10" fill="#2f5d50"/>
+    <text x="105" y="112" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">触发</text>
+    <text x="105" y="134" text-anchor="middle" fill="#dfe9e2" font-size="12">客户委托</text>
+
+    <!-- 输入 -->
+    <rect x="230" y="80" width="150" height="76" rx="10" fill="#3c7263"/>
+    <text x="305" y="112" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">输入</text>
+    <text x="305" y="134" text-anchor="middle" fill="#dfe9e2" font-size="12">客户单证资料</text>
+
+    <!-- ① 单证检查 -->
+    <rect x="430" y="80" width="160" height="76" rx="10" fill="#2f5d50"/>
+    <text x="510" y="106" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">① 单证检查</text>
+    <text x="510" y="128" text-anchor="middle" fill="#dfe9e2" font-size="12">责任人：林亦舟（一线）</text>
+    <text x="510" y="146" text-anchor="middle" fill="#dfe9e2" font-size="12">核对 ~42 分钟/票【模拟】</text>
+
+    <!-- ② 人工确认（瓶颈） -->
+    <rect x="640" y="72" width="180" height="92" rx="10" fill="#fbe9d7" stroke="#d9925f" stroke-width="2"/>
+    <text x="730" y="98" text-anchor="middle" fill="#8a4a1f" font-size="14" font-weight="bold">② 人工确认 ⚠ 瓶颈1</text>
+    <text x="730" y="120" text-anchor="middle" fill="#8a4a1f" font-size="12">责任人：授权业务负责人</text>
+    <text x="730" y="138" text-anchor="middle" fill="#8a4a1f" font-size="12">重复核对集中于此</text>
+    <text x="730" y="156" text-anchor="middle" fill="#8a4a1f" font-size="12">（f01 保留人工确认 · f41）</text>
+
+    <!-- ③ 委托作业 -->
+    <rect x="870" y="80" width="110" height="76" rx="10" fill="#3c7263"/>
+    <text x="925" y="112" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">③ 委托作业</text>
+    <text x="925" y="134" text-anchor="middle" fill="#dfe9e2" font-size="12">执行与跟单</text>
+
+    <!-- ④ 归档 -->
+    <rect x="870" y="220" width="110" height="76" rx="10" fill="#2f5d50"/>
+    <text x="925" y="252" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">④ 归档</text>
+    <text x="925" y="274" text-anchor="middle" fill="#dfe9e2" font-size="12">留存待核实（f43）</text>
+
+    <!-- 主流程箭头 -->
+    <line x1="180" y1="118" x2="226" y2="118" stroke="#2f5d50" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="380" y1="118" x2="426" y2="118" stroke="#2f5d50" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="590" y1="118" x2="636" y2="118" stroke="#2f5d50" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="820" y1="118" x2="866" y2="118" stroke="#2f5d50" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="925" y1="156" x2="925" y2="216" stroke="#2f5d50" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- ===== 异常路径 A：版本/字段存疑 ===== -->
+    <text x="30" y="230" font-size="15" font-weight="bold" fill="#c2502a">异常路径 A：版本 / 字段存疑（傅景规则 f44）</text>
+
+    <rect x="430" y="252" width="170" height="70" rx="10" fill="#fff" stroke="#c2502a" stroke-width="2"/>
+    <text x="515" y="280" text-anchor="middle" fill="#c2502a" font-size="13" font-weight="bold">版本号/关键字段存疑</text>
+    <text x="515" y="300" text-anchor="middle" fill="#c2502a" font-size="12">检查环节发现 → 拦截</text>
+
+    <rect x="660" y="252" width="180" height="70" rx="10" fill="#fff" stroke="#c2502a" stroke-width="2"/>
+    <text x="750" y="280" text-anchor="middle" fill="#c2502a" font-size="13" font-weight="bold">转入人工队列</text>
+    <text x="750" y="300" text-anchor="middle" fill="#c2502a" font-size="12">出口责任人：傅景</text>
+
+    <rect x="380" y="368" width="240" height="70" rx="10" fill="#fbe9d7" stroke="#d9925f" stroke-width="2"/>
+    <text x="500" y="396" text-anchor="middle" fill="#8a4a1f" font-size="13" font-weight="bold">人工比对 ⚠ 瓶颈2</text>
+    <text x="500" y="416" text-anchor="middle" fill="#8a4a1f" font-size="12">无统一编号(f30) + 只读导出(f32)</text>
+    <text x="500" y="432" text-anchor="middle" fill="#8a4a1f" font-size="12">系统无法自动定位 → 只能人工</text>
+
+    <!-- 异常A箭头 -->
+    <path d="M 510 156 L 510 248" stroke="#c2502a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <line x1="600" y1="287" x2="656" y2="287" stroke="#c2502a" stroke-width="2" marker-end="url(#arrR)"/>
+    <path d="M 750 322 L 750 403 L 624 403" stroke="#c2502a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <path d="M 380 403 L 330 403 L 330 118 L 426 118" stroke="#c2502a" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#arrR)"/>
+    <text x="338" y="392" fill="#c2502a" font-size="12">确认后回到 ② 人工确认</text>
+
+    <!-- ===== 异常路径 B：差异未定位 ===== -->
+    <text x="30" y="500" font-size="15" font-weight="bold" fill="#c2502a">异常路径 B：差异未定位 → 驳回返工</text>
+
+    <rect x="430" y="516" width="200" height="66" rx="10" fill="#fff" stroke="#c2502a" stroke-width="2"/>
+    <text x="530" y="542" text-anchor="middle" fill="#c2502a" font-size="13" font-weight="bold">差异未定位 → 驳回返工</text>
+    <text x="530" y="562" text-anchor="middle" fill="#c2502a" font-size="12">分派与升级路径【待核实】</text>
+
+    <rect x="700" y="516" width="210" height="66" rx="10" fill="#eef2ec" stroke="#9aa89b" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="805" y="542" text-anchor="middle" fill="#5c6b5e" font-size="13" font-weight="bold">返工责任不清 ⚠ 瓶颈3</text>
+    <text x="805" y="562" text-anchor="middle" fill="#5c6b5e" font-size="12">真实返工率/频次【待核实】</text>
+
+    <path d="M 510 322 L 510 512" stroke="#c2502a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <line x1="630" y1="549" x2="696" y2="549" stroke="#c2502a" stroke-width="2" marker-end="url(#arrR)"/>
+
+    <!-- ===== 异常路径 C：客户投诉 ===== -->
+    <rect x="30" y="516" width="340" height="66" rx="10" fill="#fff" stroke="#c2502a" stroke-width="2"/>
+    <text x="200" y="536" text-anchor="middle" fill="#c2502a" font-size="13" font-weight="bold">异常路径 C：客户投诉 / 反馈</text>
+    <text x="200" y="556" text-anchor="middle" fill="#c2502a" font-size="12">叶书：先登记原始问题与版本（f54）</text>
+    <text x="200" y="573" text-anchor="middle" fill="#c2502a" font-size="12">以原始登记口径对内传递（f53）</text>
+    <path d="M 370 549 L 426 549" stroke="#c2502a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+  </svg>
+
+  <div class="foot">
+    依据：f01 链路五段（顾明岚）· f30 无统一编号、f32 仅脱敏只读导出（秦芮）· f41 正式结论须授权人员确认、f42 验收关联来源与复核记录、f44 版本/字段存疑转人工队列（傅景）· f53/f54 投诉先登记原始问题与版本（叶书）· f22 链上提交须业务负责人正式确认（唐映秋）· "~42分钟/票、220票/月"为【模拟】样本，不可当真实经营数据；各环节真实耗时、返工率、异常频次、留存期限均【待核实】。<br>
+    只能由人完成的判断：人工确认不可省略（f01）· 正式结论授权人员确认（f41）· 版本存疑人工复核（f44）。自动化仅可承担"定位与提示"。
+  </div>
+</div>
+</body>
+</html>

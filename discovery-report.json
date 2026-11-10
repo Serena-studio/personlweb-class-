@@ -1,0 +1,2058 @@
+{
+  "title": "上海外综服国际贸易有限公司 · 业务需求发现报告",
+  "generatedAt": "2026-11-10T14:46:46.314Z",
+  "library": "donghao",
+  "publicSources": [
+    {
+      "title": "外综服 · 官方业务介绍",
+      "url": "https://www.waizongfu.com/"
+    }
+  ],
+  "checkedAt": "2026-10-03",
+  "case": "进出口代理单证一致性",
+  "industry": "国际贸易",
+  "opening": "【演练假设】围绕代理单证包，团队希望减少重复核对并提高服务可追溯性。请访谈不同角色，核实问题与可行的试点范围。",
+  "coverage": {
+    "found": 29,
+    "total": 36,
+    "percent": 81
+  },
+  "note": "本报告基于合成场景访谈；需求为待验证假设。采集完整不等于真实业务需求已确认。 企业名称与公开业务方向有来源；人物、指标和业务问题均为虚构，不代表集团或成员企业实际情况。",
+  "requirements": [
+    {
+      "title": "代理单证包的价值与试点范围",
+      "owner": "业务负责人",
+      "status": "证据待补充",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "dlg-trade-documents-f01",
+          "source": "国际贸易-002 · 业务事件样本",
+          "text": "实际链路是客户提供→单证检查→人工确认→委托作业→归档；先观察每个交接点，而不是直接增加自动化。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "dlg-trade-documents-f00",
+          "source": "国际贸易-001 · 访谈事实记录",
+          "text": "这次目标是让代理单证包减少重复核对，必须保留人工确认和可追溯来源。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "dlg-trade-documents-f02",
+          "source": "国际贸易-003 · 流程与约束说明",
+          "text": "演练试点验收：50票样本的预设差异全部定位到原单据字段。",
+          "character": "顾明岚"
+        },
+        {
+          "id": "dlg-trade-documents-f03",
+          "source": "国际贸易-019 · 执行条件记录",
+          "text": "预算先限定为四周试点、两名业务骨干参与，每周投入不超过四小时，超出须重新评估。",
+          "character": "顾明岚"
+        }
+      ],
+      "acceptance": "演练试点验收：50票样本的预设差异全部定位到原单据字段。"
+    },
+    {
+      "title": "代理单证包的异常识别与人工复核",
+      "owner": "物流单证专员",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "dlg-trade-documents-f11",
+          "source": "国际贸易-005 · 业务事件样本",
+          "text": "最近一个模拟异常：客户更新装箱数量但未同步商业发票版本，需查原始版本后判断责任。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "dlg-trade-documents-f10",
+          "source": "国际贸易-004 · 访谈事实记录",
+          "text": "现场的具体困难是发票、装箱单与订单的商品名称和单位不一致；需记录发生节点和受影响对象。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "dlg-trade-documents-f12",
+          "source": "国际贸易-006 · 流程与约束说明",
+          "text": "演练基线：模拟每月220票，单证核对每票42分钟；这是虚构样本，不代表该企业真实经营数据。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "dlg-trade-documents-f13",
+          "source": "国际贸易-022 · 执行条件记录",
+          "text": "现场同事习惯先用群消息解决代理单证包的问题，再补填表格，因此回填时间不能当作发生时间。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "dlg-trade-documents-f14",
+          "source": "国际贸易-023 · 协作规则记录",
+          "text": "正式闭环前由当班人员核对代理单证包的关键字段；系统建议不能覆盖原值或省略确认。",
+          "character": "林亦舟"
+        },
+        {
+          "id": "dlg-trade-documents-f15",
+          "source": "国际贸易-024 · 验证与反馈记录",
+          "text": "为了减少返工，我需要一页缺项清单和对应代理单证包的来源位置，不需要一份很长的泛化摘要。",
+          "character": "林亦舟"
+        }
+      ],
+      "acceptance": "演练基线：模拟每月220票，单证核对每票42分钟；这是虚构样本，不代表该企业真实经营数据。"
+    },
+    {
+      "title": "代理单证包的版本交接与责任清单",
+      "owner": "项目流程协调员",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P0",
+      "evidence": [
+        {
+          "id": "dlg-trade-documents-f22",
+          "source": "国际贸易-009 · 流程与约束说明",
+          "text": "一线专员可提交代理单证包的变更，正式确认由对应业务负责人完成，模型没有审批权限。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "dlg-trade-documents-f25",
+          "source": "国际贸易-027 · 验证与反馈记录",
+          "text": "资料负责人保存代理单证包的确认链，跨团队变更需要登记责任人，未确认项不能归到对方名下。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "dlg-trade-documents-f20",
+          "source": "国际贸易-007 · 访谈事实记录",
+          "text": "流程协调的责任是跟踪客户提供→单证检查→人工确认→委托作业→归档，每次交接记录接收人、版本与未结项。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "dlg-trade-documents-f23",
+          "source": "国际贸易-025 · 执行条件记录",
+          "text": "交接代理单证包时必须列明最新版本、尚未确认事项和截止时间，不能只发一条“已处理”的消息。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "dlg-trade-documents-f21",
+          "source": "国际贸易-008 · 业务事件样本",
+          "text": "可提供的练习资料包括虚构发票、装箱单、订单和版本确认记录；均为合成样本，需要另行获取真实项目授权资料。",
+          "character": "唐映秋"
+        },
+        {
+          "id": "dlg-trade-documents-f24",
+          "source": "国际贸易-026 · 协作规则记录",
+          "text": "对代理单证包采用版本有效期和确认状态两个条件，作废记录保留原因，不靠文件名猜测最新版本。",
+          "character": "唐映秋"
+        }
+      ],
+      "acceptance": "一线专员可提交代理单证包的变更，正式确认由对应业务负责人完成，模型没有审批权限。"
+    },
+    {
+      "title": "代理单证包的数据关联与只读集成",
+      "owner": "数字化工程师",
+      "status": "已完成角色事实采集，仍需试点验证",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "dlg-trade-documents-f30",
+          "source": "国际贸易-010 · 访谈事实记录",
+          "text": "演练环境使用内部服务台、业务台账与文件库三类工具，代理单证包尚无统一关联编号。",
+          "character": "秦芮"
+        },
+        {
+          "id": "dlg-trade-documents-f32",
+          "source": "国际贸易-012 · 流程与约束说明",
+          "text": "试点只开放代理单证包的脱敏只读导出；写回、外部消息和执行接口均不开放。",
+          "character": "秦芮"
+        },
+        {
+          "id": "dlg-trade-documents-f35",
+          "source": "国际贸易-030 · 验证与反馈记录",
+          "text": "读取失败时保留上次代理单证包快照并标记时间；提示人工核查，不编造最新状态或悄悄重试业务动作。",
+          "character": "秦芮"
+        },
+        {
+          "id": "dlg-trade-documents-f34",
+          "source": "国际贸易-029 · 协作规则记录",
+          "text": "更新代理单证包时同时记录业务发生时间和系统接收时间；过期来源不能覆盖已确认的新版本。",
+          "character": "秦芮"
+        },
+        {
+          "id": "dlg-trade-documents-f31",
+          "source": "国际贸易-011 · 业务事件样本",
+          "text": "需要对齐的关键字段为商品演练编码、数量、单位、金额、币种与版本；缺失值与未确认值必须区分。",
+          "character": "秦芮"
+        },
+        {
+          "id": "dlg-trade-documents-f33",
+          "source": "国际贸易-028 · 执行条件记录",
+          "text": "数据质量检查先核对代理单证包的重复编号、空时间、版本断链与单位差异，问题记录必须保留原行。",
+          "character": "秦芮"
+        }
+      ],
+      "acceptance": "试点只开放代理单证包的脱敏只读导出；写回、外部消息和执行接口均不开放。"
+    },
+    {
+      "title": "代理单证包的质量验收与权限约束",
+      "owner": "审核与质量负责人",
+      "status": "证据待补充",
+      "priority": "P0",
+      "evidence": [
+        {
+          "id": "dlg-trade-documents-f44",
+          "source": "国际贸易-032 · 协作规则记录",
+          "text": "无法确认代理单证包版本或关键字段时进入人工处理队列，必要时暂停试点，不能默认通过。",
+          "character": "傅景"
+        },
+        {
+          "id": "dlg-trade-documents-f41",
+          "source": "国际贸易-014 · 业务事件样本",
+          "text": "所有代理单证包的正式结论须由授权人员确认；跨企业资料只按明确授权范围访问。",
+          "character": "傅景"
+        },
+        {
+          "id": "dlg-trade-documents-f43",
+          "source": "国际贸易-031 · 执行条件记录",
+          "text": "留存代理单证包的原始版本、修订原因与确认人，练习结束按项目约定删除虚构个人字段。",
+          "character": "傅景"
+        },
+        {
+          "id": "dlg-trade-documents-f45",
+          "source": "国际贸易-033 · 验证与反馈记录",
+          "text": "审计要看到谁查过代理单证包、使用哪个版本、提出什么建议及谁确认，访问记录不能只留下最终摘要。",
+          "character": "傅景"
+        },
+        {
+          "id": "dlg-trade-documents-f42",
+          "source": "国际贸易-015 · 流程与约束说明",
+          "text": "演练质量标准：50票样本的预设差异全部定位到原单据字段；每条结果还要关联来源和人工复核记录。",
+          "character": "傅景"
+        }
+      ],
+      "acceptance": "演练质量标准：50票样本的预设差异全部定位到原单据字段；每条结果还要关联来源和人工复核记录。"
+    },
+    {
+      "title": "代理单证包的跨团队口径确认",
+      "owner": "客户协同代表",
+      "status": "证据待补充",
+      "priority": "P1",
+      "evidence": [
+        {
+          "id": "dlg-trade-documents-f54",
+          "source": "国际贸易-035 · 协作规则记录",
+          "text": "当客户投诉代理单证包的结果错误时，先登记原始问题、相关版本与恢复需求，不用模型推测客户意图。",
+          "character": "叶书"
+        },
+        {
+          "id": "dlg-trade-documents-f53",
+          "source": "国际贸易-034 · 执行条件记录",
+          "text": "同一代理单证包的数量、状态和截止时间要在交接双方之间核对，以原始记录定义口径而不是比较两张汇总表。",
+          "character": "叶书"
+        }
+      ],
+      "acceptance": "尚未访谈到此项验收或约束，需继续核实。"
+    }
+  ],
+  "gaps": [
+    {
+      "role": "业务负责人",
+      "character": "顾明岚",
+      "topic": "决策",
+      "question": "谁参与决策，谁可以否决方案？"
+    },
+    {
+      "role": "业务负责人",
+      "character": "顾明岚",
+      "topic": "范围",
+      "question": "首期优先做什么，试点覆盖哪里？"
+    },
+    {
+      "role": "审核与质量负责人",
+      "character": "傅景",
+      "topic": "风险",
+      "question": "有哪些安全、合规或业务红线？"
+    },
+    {
+      "role": "客户协同代表",
+      "character": "叶书",
+      "topic": "协作",
+      "question": "跨部门交接有哪些冲突？"
+    },
+    {
+      "role": "客户协同代表",
+      "character": "叶书",
+      "topic": "指标",
+      "question": "有多少单、花多久，有统计样本吗？"
+    },
+    {
+      "role": "客户协同代表",
+      "character": "叶书",
+      "topic": "边界",
+      "question": "本次范围是什么，哪些事情不能自动做？"
+    },
+    {
+      "role": "客户协同代表",
+      "character": "叶书",
+      "topic": "反馈",
+      "question": "试点反馈怎么收集，怎样形成改进闭环？"
+    }
+  ],
+  "transcript": [
+    {
+      "id": "turn-1",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "请以你最近亲手处理的一单代理单证业务为例，从接到委托开始，一步步讲这单的完整经过。",
+      "at": "2026-11-10T13:45:02.220Z"
+    },
+    {
+      "id": "turn-2",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "具体某一单的完整经过，我这边没有可引用的记录，尚未核实，不能凭印象编一条链路出来。我能确认的是业务口径：实际链路是客户提供→单证检查→人工确认→委托作业→归档，先观察每个交接点，而不是直接增加自动化 [dlg-trade-documents-f01]；这次目标是让代理单证包减少重复核对，同时必须保留人工确认和可追溯来源 [dlg-trade-documents-f00]。\n\n从我的职责看，单笔案例只是样本，我更关心它能否支撑试点范围决策：重复核对集中在哪个交接点、异常由谁复核、版本交接后责任怎么落。建议你找林亦舟取现场操作与异常处理的实例，找唐映秋确认交接与资料责任，再回到我这里谈试点边界。另外请澄清：你要的是单笔全流程复盘，还是按交接点归纳的共性问题？这决定我能否把它纳入试点验收口径。",
+      "at": "2026-11-10T13:45:02.220Z",
+      "factIds": [
+        "dlg-trade-documents-f01",
+        "dlg-trade-documents-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "4786eef5-c8e6-49e8-93e1-06cc09f271c2",
+        "at": "2026-11-10T13:45:02.219Z",
+        "durationMs": 2464,
+        "usage": {
+          "prompt_tokens": 939,
+          "completion_tokens": 232,
+          "total_tokens": 1171
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "a6c501fb-b4b5-4757-90f3-3242cbd8aae3",
+            "at": "2026-11-10T13:44:59.755Z",
+            "durationMs": 2308,
+            "usage": {
+              "prompt_tokens": 863,
+              "completion_tokens": 200,
+              "total_tokens": 1063
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "4786eef5-c8e6-49e8-93e1-06cc09f271c2",
+            "at": "2026-11-10T13:45:02.219Z",
+            "durationMs": 2464,
+            "usage": {
+              "prompt_tokens": 939,
+              "completion_tokens": 232,
+              "total_tokens": 1171
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "59d82dc7-4dc8-45dd-af8a-cce5be575024",
+          "at": "2026-11-10T13:44:57.446Z",
+          "durationMs": 1199,
+          "usage": {
+            "prompt_tokens": 394,
+            "completion_tokens": 60,
+            "total_tokens": 454
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-3",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "这单的输入是什么（谁给您的什么材料）、输出是什么（最终交付了哪些单据）、交接给了谁？",
+      "at": "2026-11-10T13:45:34.379Z"
+    },
+    {
+      "id": "turn-4",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "单笔的输入输出清单我这边没有可引用的记录，尚未核实，不能凭印象给你列一套单据。我能确认的是业务口径：链路是客户提供→单证检查→人工确认→委托作业→归档，交接点要逐个观察，而不是直接上自动化 [dlg-trade-documents-f01]；目标是减少重复核对，同时保留人工确认和可追溯来源 [dlg-trade-documents-f00]。\n\n从我的职责看，输入输出本身不是我要拍板的东西，我要的是它能支撑试点范围：材料由谁提供、在哪一步被重复核对、异常退回给谁、归档后责任落在谁头上。建议你找林亦舟取现场操作与异常处理的实例，找唐映秋确认交接与资料责任，再回来跟我谈试点边界。另外请澄清：你要的是单笔材料清单，还是按交接点归纳的共性问题？前者我无法提供，后者可以纳入验收口径。",
+      "at": "2026-11-10T13:45:34.379Z",
+      "factIds": [
+        "dlg-trade-documents-f01",
+        "dlg-trade-documents-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "14f2bfe7-0f88-421f-a054-7292bd7c889b",
+        "at": "2026-11-10T13:45:34.379Z",
+        "durationMs": 2184,
+        "usage": {
+          "prompt_tokens": 1139,
+          "completion_tokens": 228,
+          "total_tokens": 1367
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "e6cf2711-8490-4633-85d6-b19e478a66a1",
+          "at": "2026-11-10T13:45:32.194Z",
+          "durationMs": 933,
+          "usage": {
+            "prompt_tokens": 669,
+            "completion_tokens": 24,
+            "total_tokens": 693
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-5",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "这单从开始到结束花了多久？哪个环节最慢？",
+      "at": "2026-11-10T13:46:14.811Z"
+    },
+    {
+      "id": "turn-6",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "单笔耗时和哪个环节最慢，我这边没有可引用的记录，尚未核实，不能凭印象给你一个时长或排名。我能确认的是业务口径：链路是客户提供→单证检查→人工确认→委托作业→归档，交接点要逐个观察，而不是直接上自动化 [dlg-trade-documents-f01]；目标是减少重复核对，同时保留人工确认和可追溯来源 [dlg-trade-documents-f00]。\n\n从我的职责看，耗时本身不是我要拍板的东西，我要的是它能否支撑试点范围：慢在哪个交接点、重复核对集中在哪、异常退回给谁。建议你找林亦舟取现场操作与异常处理的实例，找唐映秋确认交接与资料责任，再回来跟我谈试点边界。另外请澄清：你要的是单笔耗时复盘，还是按交接点归纳的共性问题？前者我无法提供，后者可以纳入验收口径。",
+      "at": "2026-11-10T13:46:14.811Z",
+      "factIds": [
+        "dlg-trade-documents-f01",
+        "dlg-trade-documents-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "fa923ba5-1b19-468d-af69-541ce9f51ed4",
+        "at": "2026-11-10T13:46:14.811Z",
+        "durationMs": 1947,
+        "usage": {
+          "prompt_tokens": 1398,
+          "completion_tokens": 225,
+          "total_tokens": 1623
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "c0747f0a-92d4-4d76-837b-5a4a1fdb9a79",
+          "at": "2026-11-10T13:46:12.864Z",
+          "durationMs": 891,
+          "usage": {
+            "prompt_tokens": 928,
+            "completion_tokens": 24,
+            "total_tokens": 952
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-7",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "这单出现过什么异常或不一致？当时是怎么处理的、谁拍板的？",
+      "at": "2026-11-10T13:46:40.887Z"
+    },
+    {
+      "id": "turn-8",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "单笔异常的具体记录我这边没有可引用的材料，尚未核实，不能凭印象给你编一条异常和处理经过。我能确认的是业务口径：链路是客户提供→单证检查→人工确认→委托作业→归档，交接点要逐个观察，而不是直接增加自动化 [dlg-trade-documents-f01]；目标是减少重复核对，同时保留人工确认和可追溯来源 [dlg-trade-documents-f00]。\n\n从我的职责看，异常本身不是我要拍板的东西，我要的是它能否支撑试点范围：异常在哪类交接点被识别、退回给谁、复核由谁做、拍板责任落在哪一层。这些需要林亦舟的现场实例和唐映秋的交接责任口径来补。另外请澄清：你要的是单笔异常复盘，还是按交接点归纳的异常类型？前者我无法提供，后者可以纳入试点验收口径。",
+      "at": "2026-11-10T13:46:40.887Z",
+      "factIds": [
+        "dlg-trade-documents-f01",
+        "dlg-trade-documents-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "ede9dc1d-d96d-4af6-a04d-2623d1d54960",
+        "at": "2026-11-10T13:46:40.887Z",
+        "durationMs": 1743,
+        "usage": {
+          "prompt_tokens": 1656,
+          "completion_tokens": 219,
+          "total_tokens": 1875
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "4e3626c2-6ec7-486f-b5c2-a2f2b8ee85d7",
+          "at": "2026-11-10T13:46:39.144Z",
+          "durationMs": 842,
+          "usage": {
+            "prompt_tokens": 1186,
+            "completion_tokens": 33,
+            "total_tokens": 1219
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-9",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "这次重复核对/返工大概花了多少人力时间？有记录或样本可以验证吗？",
+      "at": "2026-11-10T13:48:05.830Z"
+    },
+    {
+      "id": "turn-10",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "人力时间和返工量我这边没有可引用的记录，尚未核实，不能给你一个数字或比例。我能确认的是业务口径：链路是客户提供→单证检查→人工确认→委托作业→归档，交接点要逐个观察，而不是直接增加自动化 [dlg-trade-documents-f01]；目标是减少重复核对，同时保留人工确认和可追溯来源 [dlg-trade-documents-f00]。\n\n从我的职责看，数字本身不是我要拍板的东西，我要的是它能否支撑试点范围：重复核对集中在哪个交接点、返工退回给谁、复核由谁做。建议你找林亦舟取现场操作与异常处理的实例，找唐映秋确认交接与资料责任，再回来跟我谈试点边界。另外请澄清：你要的是可量化的工时统计，还是按交接点归纳的重复核对类型？前者需要现场记录支撑，后者可以纳入试点验收口径。",
+      "at": "2026-11-10T13:48:05.830Z",
+      "factIds": [
+        "dlg-trade-documents-f00",
+        "dlg-trade-documents-f01"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "ab876068-0b93-4810-ac42-c23ba126e84c",
+        "at": "2026-11-10T13:48:05.829Z",
+        "durationMs": 1837,
+        "usage": {
+          "prompt_tokens": 1912,
+          "completion_tokens": 225,
+          "total_tokens": 2137
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "62395722-afd2-4dd7-a5c3-4329f21a14a2",
+          "at": "2026-11-10T13:48:03.991Z",
+          "durationMs": 546,
+          "usage": {
+            "prompt_tokens": 1442,
+            "completion_tokens": 42,
+            "total_tokens": 1484
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-11",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "减少重复核对后，你怎么验收成功？试点标准是按时效、差错率还是返工次数算？ 7. 试点预算大概多少，成本怎么核算、谁审批？ 8. 谁参与试点决策？你、傅景还是其他人有否决权？ 9. 首期试点优先覆盖哪条航线/哪类单证？为什么不选其他的？ 10. 哪份原始资料（单据、台账、邮件）能核对你上面说的？你怀疑和哪个角色的记录对不上？",
+      "at": "2026-11-10T13:52:12.210Z"
+    },
+    {
+      "id": "turn-12",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "验收口径我先说能定的：试点验收是50票样本的预设差异全部定位到原单据字段 [dlg-trade-documents-f02]，同时必须保留人工确认和可追溯来源 [dlg-trade-documents-f00]。所以我不按时效或返工次数单独算成功——那两项我这边没有可引用的基线记录，尚未核实；差错率也要先定义“差异”再谈。我的建议（待验证假设）：以“差异能否定位到原单据字段”为主验收项，时效和返工只作观察项，不进验收门槛。\n\n预算、成本核算和审批路径，我这边没有可引用依据，尚未核实，不能给数字；这属于我权限外的审批红线，需要走正式流程确认。决策参与上，我只能就试点范围表态，质量与风险边界要傅景确认，我不替他定否决权归属。首期覆盖哪条航线或哪类单证，我目前没有依据支撑取舍，尚未核实，建议先按交接点归纳共性问题再定范围。可核对的原始资料我手上没有可引用的单据或台账，尚未核实；与哪个角色记录对不上，我也没有比对结论，建议先找林亦舟和唐映秋取现场与交接记录再回来对口径。",
+      "at": "2026-11-10T13:52:12.210Z",
+      "factIds": [
+        "dlg-trade-documents-f02",
+        "dlg-trade-documents-f00"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "0cb75fe4-450b-49e4-8876-c55098eeb92e",
+        "at": "2026-11-10T13:52:12.209Z",
+        "durationMs": 3527,
+        "usage": {
+          "prompt_tokens": 2253,
+          "completion_tokens": 298,
+          "total_tokens": 2551
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "d5392cde-fe2b-4f55-bd79-0e4af0c41aac",
+          "at": "2026-11-10T13:52:08.682Z",
+          "durationMs": 1050,
+          "usage": {
+            "prompt_tokens": 1794,
+            "completion_tokens": 60,
+            "total_tokens": 1854
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-13",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "就用刚才顾明岚那单（报出单号/日期），你手上经手了哪些单据、和谁交接？ • 给我讲一个具体的差错或退单例子：错在哪个字段、怎么发现、重做花了多久？ • 你每天/每周处理多少单？手工核对一项大概几分钟？ • 有没有绕开系统的习惯做法？为什么？ • 哪份台账或底稿能证明这些数字？",
+      "at": "2026-11-10T13:52:50.803Z"
+    },
+    {
+      "id": "turn-14",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "单号或日期我这边不能凭印象报，顾明岚那单具体是哪一票，需要你给出单号或日期，我才能对应到经手单据和交接人；否则只能算尚未核实。\n\n差错例子可以讲一个模拟场景：客户更新了装箱数量，但商业发票版本没同步，我是在核对商品名称和单位时发现数量对不上，再回查原始版本才判断责任归属[dlg-trade-documents-f11]。现场更常见的困难是发票、装箱单与订单的商品名称和单位不一致，得先记清发生节点和受影响对象[dlg-trade-documents-f10]。重做耗时我手上没有计时记录，不能给数字。\n\n日均单量和单项核对分钟数，我也没有台账支撑，属于尚未核实。绕开系统的做法我不主动讲，涉及合规红线，需要先明确访谈用途和审批口径。\n\n能证明数字的底稿，建议先确认哪份台账被授权调阅，我再对照说明；这也是我想追问的：异常识别和人工复核的试点范围，是按单证包还是按客户维度划？",
+      "at": "2026-11-10T13:52:50.803Z",
+      "factIds": [
+        "dlg-trade-documents-f11",
+        "dlg-trade-documents-f10"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "bb60a43e-aa55-4219-946c-3ee2b17e2a8b",
+        "at": "2026-11-10T13:52:50.803Z",
+        "durationMs": 2874,
+        "usage": {
+          "prompt_tokens": 933,
+          "completion_tokens": 270,
+          "total_tokens": 1203
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ca39315b-5862-48b0-aaee-767ce928749b",
+          "at": "2026-11-10T13:52:47.929Z",
+          "durationMs": 1223,
+          "usage": {
+            "prompt_tokens": 478,
+            "completion_tokens": 60,
+            "total_tokens": 538
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-15",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "哪些操作必须人工审批，谁有权限？",
+      "at": "2026-11-10T13:58:57.134Z"
+    },
+    {
+      "id": "turn-16",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "按我这边掌握的口径，一线专员可以提交代理单证包的变更，但正式确认必须由对应业务负责人完成，模型本身没有审批权限 [dlg-trade-documents-f22]。所以流程上我关注的是：变更提交后要落到具体业务负责人手上，不能停在系统里没人认领。\n\n另外，资料负责人要保存代理单证包的确认链，跨团队变更必须登记责任人，未确认项不能归到对方名下 [dlg-trade-documents-f25]。这条对我做交接清单很关键——责任归属得在变更发生时就定下来，而不是事后补。\n\n不过你问的“哪些操作必须人工审批”，目前我手上只有变更确认这一层，其他操作类型是否也要审批，尚未核实。建议先按变更提交与确认这条线做试点，把审批节点和责任人对齐，再逐步扩。你能明确一下你说的“操作”具体指哪几类吗？",
+      "at": "2026-11-10T13:58:57.134Z",
+      "factIds": [
+        "dlg-trade-documents-f22",
+        "dlg-trade-documents-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "30269d0f-214a-4518-9493-4e1615bee7a3",
+        "at": "2026-11-10T13:58:57.134Z",
+        "durationMs": 2253,
+        "usage": {
+          "prompt_tokens": 928,
+          "completion_tokens": 229,
+          "total_tokens": 1157
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "6b3c9d78-8fd5-4f5d-954d-4697097568d2",
+            "at": "2026-11-10T13:58:54.881Z",
+            "durationMs": 1659,
+            "usage": {
+              "prompt_tokens": 852,
+              "completion_tokens": 167,
+              "total_tokens": 1019
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "30269d0f-214a-4518-9493-4e1615bee7a3",
+            "at": "2026-11-10T13:58:57.134Z",
+            "durationMs": 2253,
+            "usage": {
+              "prompt_tokens": 928,
+              "completion_tokens": 229,
+              "total_tokens": 1157
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "c59c0f8e-e2e2-46b0-b2d9-4227121a180f",
+          "at": "2026-11-10T13:58:53.222Z",
+          "durationMs": 933,
+          "usage": {
+            "prompt_tokens": 406,
+            "completion_tokens": 33,
+            "total_tokens": 439
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-17",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "现在单证数据存在哪些系统里？哪些接口能读、哪些能写？ • 单证关键字段有哪些？口径不一致或脏数据最近的一次例子？ • 数据多久同步一次？接口中断时大家怎么办？ • 如果做试点，系统侧要具备什么条件、卡点在哪？ • 哪份数据字典或接口文档能核对你说的？",
+      "at": "2026-11-10T14:00:57.490Z"
+    },
+    {
+      "id": "turn-18",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "先按我这边能确认的说。演练环境里是内部服务台、业务台账和文件库三类工具，代理单证包目前没有统一关联编号[dlg-trade-documents-f30]，所以跨系统把同一份单证包串起来这件事，现在没有现成主键可用，这是数据关联方向最直接的卡点。接口方面，试点只开放脱敏只读导出，写回、外部消息和执行接口都不开放[dlg-trade-documents-f32]，因此我能承诺的是读侧集成，任何写回需求都要走审批，不在我权限内。\n\n你问的关键字段清单、口径不一致或脏数据的具体例子、同步频率、接口中断的处置，这些我手上没有可引用的事实，尚未核实，不能凭印象给。数据字典和接口文档我建议以服务台和文件库里的现行版本为准，具体哪份是有效版本需要和唐映秋对一下责任清单。\n\n试点系统侧条件我提几条待验证假设：一是先定单证包的关联规则，哪怕用组合键；二是只读导出的脱敏范围和字段白名单要书面确认；三是明确中断时的降级方式。这几条需要顾明岚和傅景拍板，我只负责落地和故障处理。",
+      "at": "2026-11-10T14:00:57.490Z",
+      "factIds": [
+        "dlg-trade-documents-f30",
+        "dlg-trade-documents-f32"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "aed28163-00d9-492e-979f-8db804223714",
+        "at": "2026-11-10T14:00:57.490Z",
+        "durationMs": 2757,
+        "usage": {
+          "prompt_tokens": 917,
+          "completion_tokens": 298,
+          "total_tokens": 1215
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "a4bfe163-729b-47d6-88da-eef1ba9db95f",
+          "at": "2026-11-10T14:00:54.733Z",
+          "durationMs": 1249,
+          "usage": {
+            "prompt_tokens": 467,
+            "completion_tokens": 60,
+            "total_tokens": 527
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-19",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "单证一致性上有哪些红线？哪些操作绝对不能自动化、必须人工审批？ • 最近一次审核拦下的问题是什么？怎么追溯修改记录？ • 审计要求留什么凭证、保留多久？ • 试点的验收标准你认什么口径？你怎么参与否决？ • 哪份审核记录或质检报告能核对？",
+      "at": "2026-11-10T14:01:54.691Z"
+    },
+    {
+      "id": "turn-20",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "先划清我能表态的边界：我负责质量验收与权限约束，红线口径和审批清单要跟顾明岚、唐映秋对齐后才能定稿，现在只能给方向。\n\n红线方面，我认两条：无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此，我倾向把「版本/关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设，需业务负责人确认。\n\n你问的最近一次拦截案例、审计留存期限、可核对的审核记录，我手上没有依据，尚未核实，不能编。验收口径我认「异常可拦截、结论可追溯到授权人、越权访问为零」三条，否决权怎么行使需与顾明岚明确。建议先给我一份现有审核记录清单，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:01:54.691Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "416d1efa-28b8-454b-98df-84d2e017d9ce",
+        "at": "2026-11-10T14:01:54.691Z",
+        "durationMs": 2702,
+        "usage": {
+          "prompt_tokens": 908,
+          "completion_tokens": 266,
+          "total_tokens": 1174
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b558cac8-8551-40a1-913f-2d507099a8c3",
+          "at": "2026-11-10T14:01:51.989Z",
+          "durationMs": 1121,
+          "usage": {
+            "prompt_tokens": 452,
+            "completion_tokens": 60,
+            "total_tokens": 512
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-21",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r5",
+      "text": "客户（下游）对单证一致性的投诉/反馈，最近一次是什么、怎么处理的？ • 客户口径的“完成”和我们内部口径差在哪？ • 跨部门/跨公司交接冲突最近一次的例子？ • 试点反馈打算怎么收集、多久一个循环？ • 哪份反馈记录或工单能核对？",
+      "at": "2026-11-10T14:02:43.148Z"
+    },
+    {
+      "id": "turn-22",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r5",
+      "text": "这几个问题我只能按我掌握的口径回答，不能替其他角色下结论。最近一次具体投诉的时间、内容和处理结果，我这边尚未核实，需要调取原始工单才能确认；按协作规则，客户投诉代理单证包结果错误时，应先登记原始问题、相关版本与恢复需求，不用模型推测客户意图 [dlg-trade-documents-f54]。客户口径的“完成”与内部口径的差异，目前也尚未核实，但口径确认上我坚持一条：同一代理单证包的数量、状态和截止时间要在交接双方之间核对，以原始记录定义口径，而不是比较两张汇总表 [dlg-trade-documents-f53]。跨部门或跨公司交接冲突的最近例子，我手上没有可引用的记录，需要唐映秋或林亦舟提供。试点反馈我建议按固定短周期收集，周期长度和渠道属于待验证假设，需与顾明岚确认试点范围后再定。可核对的载体应是原始投诉登记和交接核对记录，具体工单编号请允许我核实后再给。",
+      "at": "2026-11-10T14:02:43.148Z",
+      "factIds": [
+        "dlg-trade-documents-f54",
+        "dlg-trade-documents-f53"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "afba423d-668e-4694-9dd0-50a883661153",
+        "at": "2026-11-10T14:02:43.148Z",
+        "durationMs": 1958,
+        "usage": {
+          "prompt_tokens": 989,
+          "completion_tokens": 254,
+          "total_tokens": 1243
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "91bb755e-9e62-42c0-9bc7-f9dfb2af7a6a",
+            "at": "2026-11-10T14:02:41.190Z",
+            "durationMs": 2973,
+            "usage": {
+              "prompt_tokens": 913,
+              "completion_tokens": 306,
+              "total_tokens": 1219
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "afba423d-668e-4694-9dd0-50a883661153",
+            "at": "2026-11-10T14:02:43.148Z",
+            "durationMs": 1958,
+            "usage": {
+              "prompt_tokens": 989,
+              "completion_tokens": 254,
+              "total_tokens": 1243
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "62ddb9a0-f302-4df1-9b91-9c1c1a0831e8",
+          "at": "2026-11-10T14:02:38.217Z",
+          "durationMs": 1043,
+          "usage": {
+            "prompt_tokens": 470,
+            "completion_tokens": 60,
+            "total_tokens": 530
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-23",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "有多少单、花多久，有统计样本吗？",
+      "at": "2026-11-10T14:15:05.000Z"
+    },
+    {
+      "id": "turn-24",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "有演练基线，但只能当模拟样本用：模拟每月220票，单证核对每票42分钟[dlg-trade-documents-f12]。这是虚构样本，不代表真实经营数据，我不会拿它当现场统计口径。\n\n我手上没有真实台账或计时记录能证明实际单量和耗时，这部分尚未核实。要核实的话，得先确认哪份台账被授权调阅，我再对照说明。\n\n另外想追问：这个基线是打算用来定试点范围，还是做验收对比？如果按客户维度划试点，我这边异常识别和人工复核的样本会集中在少数客户，代表性要提前说清楚。",
+      "at": "2026-11-10T14:15:05.000Z",
+      "factIds": [
+        "dlg-trade-documents-f12"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "51344182-6554-4759-91e5-a1c28aab8f92",
+        "at": "2026-11-10T14:15:04.999Z",
+        "durationMs": 1578,
+        "usage": {
+          "prompt_tokens": 1181,
+          "completion_tokens": 157,
+          "total_tokens": 1338
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "31b0559d-0cc3-4425-80e7-fae35178cd8f",
+          "at": "2026-11-10T14:15:03.420Z",
+          "durationMs": 1310,
+          "usage": {
+            "prompt_tokens": 775,
+            "completion_tokens": 15,
+            "total_tokens": 790
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-25",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "现场操作有什么限制，设备和网络情况怎样？",
+      "at": "2026-11-10T14:15:20.573Z"
+    },
+    {
+      "id": "turn-26",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "设备和网络的具体配置我这边没有核实依据，不能凭印象说。能确认的是操作习惯上的两个约束：现场同事遇到代理单证包问题，习惯先在群里沟通解决，再补填表格，所以表格里的回填时间不能当作问题实际发生时间[dlg-trade-documents-f13]；正式闭环前由当班人员核对关键字段，系统建议不能覆盖原值，也不能省略确认这一步[dlg-trade-documents-f14]。\n\n这两点直接影响异常识别和人工复核的设计：如果试点想用时间戳判断异常先后，得先区分群消息时间和回填时间；如果想让系统自动带出建议值，也必须保留人工确认动作，不能默认覆盖。\n\n我想追问：试点是打算在现有设备条件下跑，还是先做设备或网络改造？这决定我这边复核环节能不能按预期节奏走。",
+      "at": "2026-11-10T14:15:20.573Z",
+      "factIds": [
+        "dlg-trade-documents-f13",
+        "dlg-trade-documents-f14"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "45b322b2-51fa-4b84-b54d-dc84660cc5d9",
+        "at": "2026-11-10T14:15:20.573Z",
+        "durationMs": 2157,
+        "usage": {
+          "prompt_tokens": 1419,
+          "completion_tokens": 213,
+          "total_tokens": 1632
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "8f1b3567-5214-4b44-9977-aa03d37bb0ae",
+          "at": "2026-11-10T14:15:18.415Z",
+          "durationMs": 1091,
+          "usage": {
+            "prompt_tokens": 959,
+            "completion_tokens": 33,
+            "total_tokens": 992
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-27",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "辅助结果怎么复核，发现错误怎么办？",
+      "at": "2026-11-10T14:15:33.086Z"
+    },
+    {
+      "id": "turn-28",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r1",
+      "text": "复核这块我讲现场做法：正式闭环前由当班人员核对代理单证包的关键字段，系统给出的建议不能覆盖原值，也不能省略确认这一步[dlg-trade-documents-f14]。所以辅助结果进来，我只把它当提示，不当结论，关键字段还是人工过一遍。\n\n发现错误时，我关心的是能不能快速定位到缺项和来源。为了减少返工，我需要一页缺项清单和对应代理单证包的来源位置，不需要一份很长的泛化摘要[dlg-trade-documents-f15]。错误怎么回写、由谁确认、是否留痕，这些流程细节我这边尚未核实，得先跟流程和审核口径对齐。\n\n我想追问：辅助结果发现错误后，是走人工复核闭环，还是先退回上一环节？这决定我这边复核清单要列到哪一层。",
+      "at": "2026-11-10T14:15:33.086Z",
+      "factIds": [
+        "dlg-trade-documents-f14",
+        "dlg-trade-documents-f15"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "3e40d8a3-6510-4e64-b669-3cd261d1f514",
+        "at": "2026-11-10T14:15:33.086Z",
+        "durationMs": 2173,
+        "usage": {
+          "prompt_tokens": 1660,
+          "completion_tokens": 213,
+          "total_tokens": 1873
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "e93b4d8b-ce37-425c-a142-44fe3d9beca0",
+          "at": "2026-11-10T14:15:30.913Z",
+          "durationMs": 849,
+          "usage": {
+            "prompt_tokens": 1198,
+            "completion_tokens": 42,
+            "total_tokens": 1240
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-29",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "试点预算是多少，成本怎样核算？",
+      "at": "2026-11-10T14:17:21.838Z"
+    },
+    {
+      "id": "turn-30",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r0",
+      "text": "预算我能给的口径是：四周试点、两名业务骨干参与，每周投入不超过四小时，超出这个范围就要重新评估 [dlg-trade-documents-f03]。这是执行条件，不是财务口径。\n\n成本核算方式我这边没有可引用依据，尚未核实，不能给核算科目或分摊规则；这属于我权限外的审批红线，要走正式流程确认。我的建议（待验证假设）：把成本拆成两块看——骨干投入的工时按上述上限封顶，系统或集成侧的成本由秦芮给出条件后再评估，不要先摊进试点。\n\n另外请澄清：你要的是试点本身的投入上限，还是含后续推广的总成本？前者我可以按 [dlg-trade-documents-f03] 表态，后者需要先定试点范围，而范围目前尚未核实，得先按交接点归纳共性问题再谈。",
+      "at": "2026-11-10T14:17:21.838Z",
+      "factIds": [
+        "dlg-trade-documents-f03"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "760870c6-dc22-4a12-9e1b-0f38bbaac28b",
+        "at": "2026-11-10T14:17:21.838Z",
+        "durationMs": 2620,
+        "usage": {
+          "prompt_tokens": 2532,
+          "completion_tokens": 204,
+          "total_tokens": 2736
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "f6fe0279-4002-48e7-acf8-c6ede6c27ab1",
+          "at": "2026-11-10T14:17:19.218Z",
+          "durationMs": 1246,
+          "usage": {
+            "prompt_tokens": 2118,
+            "completion_tokens": 15,
+            "total_tokens": 2133
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-31",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "请讲讲现在实际的处理流程。",
+      "at": "2026-11-10T14:19:37.225Z"
+    },
+    {
+      "id": "turn-32",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "我这边跟踪的流程是：客户提供→单证检查→人工确认→委托作业→归档，每一段交接都要记录接收人、版本和未结项 [dlg-trade-documents-f20]。所以实际处理不是“发出去就算完”，交接代理单证包时必须列明最新版本、尚未确认事项和截止时间，不能只发一条“已处理”的消息 [dlg-trade-documents-f23]。\n\n我关注的是交接点上的责任落位：谁接收、接的是哪一版、还有哪些没结，这三项缺一项，后面归档和追溯就会断。变更确认要落到具体业务负责人，未确认项不能归到对方名下。\n\n不过你问的“实际处理流程”，目前我手上只有这条主线和交接要求，各环节的具体操作细节、异常分支怎么走，尚未核实。建议先按这条主线做试点，把交接记录字段固定下来。你能明确一下你想看的是正常流程还是异常处理那段吗？",
+      "at": "2026-11-10T14:19:37.225Z",
+      "factIds": [
+        "dlg-trade-documents-f20",
+        "dlg-trade-documents-f23"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "367c9e6a-dee5-4a7e-a9df-641122f5c7ee",
+        "at": "2026-11-10T14:19:37.224Z",
+        "durationMs": 2557,
+        "usage": {
+          "prompt_tokens": 1114,
+          "completion_tokens": 240,
+          "total_tokens": 1354
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b3314afb-3dce-485f-988c-aa984b65e8ad",
+          "at": "2026-11-10T14:19:34.666Z",
+          "durationMs": 1206,
+          "usage": {
+            "prompt_tokens": 658,
+            "completion_tokens": 51,
+            "total_tokens": 709
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-33",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "可以提供哪些材料、模板或证据？",
+      "at": "2026-11-10T14:19:56.029Z"
+    },
+    {
+      "id": "turn-34",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "我这边能提供的是练习用材料：虚构发票、装箱单、订单和版本确认记录，都是合成样本，真实项目资料需要另行获取授权 [dlg-trade-documents-f21]。模板方面，我建议按交接要求固定字段——接收人、版本、未结项和截止时间，但这是待验证假设，还没定稿。\n\n证据上，我能支撑的是确认链：资料负责人保存代理单证包的确认链，跨团队变更要登记责任人，未确认项不能归到对方名下 [dlg-trade-documents-f25]。这条是我做责任清单的底账，试点验收时应该能拿它对照。\n\n需要你澄清一点：你要的材料是给试点验收用，还是给跨团队口径确认用？两者对证据颗粒度要求不一样，我这边好提前准备。",
+      "at": "2026-11-10T14:19:56.029Z",
+      "factIds": [
+        "dlg-trade-documents-f21",
+        "dlg-trade-documents-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "bd20ef75-cef1-4b81-b82b-71a6e54964d6",
+        "at": "2026-11-10T14:19:56.028Z",
+        "durationMs": 2060,
+        "usage": {
+          "prompt_tokens": 1375,
+          "completion_tokens": 205,
+          "total_tokens": 1580
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "71c25d98-bb70-4c07-b0bd-121a0a49e59b",
+          "at": "2026-11-10T14:19:53.968Z",
+          "durationMs": 1111,
+          "usage": {
+            "prompt_tokens": 923,
+            "completion_tokens": 42,
+            "total_tokens": 965
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-35",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "业务规则如何维护，冲突如何处理？",
+      "at": "2026-11-10T14:20:13.491Z"
+    },
+    {
+      "id": "turn-36",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r2",
+      "text": "规则维护这块，我手上能确认的是版本口径：代理单证包按版本有效期和确认状态两个条件管理，作废记录保留原因，不靠文件名猜最新版本 [dlg-trade-documents-f24]。所以维护动作至少包括登记有效期、更新确认状态、作废时写清原因，这三项落到交接清单里才不会断。\n\n冲突处理我关注的是责任归属：资料负责人保存确认链，跨团队变更要登记责任人，未确认项不能归到对方名下 [dlg-trade-documents-f25]。也就是说，两个版本或两个团队口径打架时，先看确认链上谁认领了哪一版，未确认的不能硬塞给对方，得挂回发起方。\n\n但规则由谁维护、冲突升级到哪一级裁决、多久内必须闭环，这些尚未核实，我不能替业务负责人或审核方定。建议先按“版本有效期+确认状态+责任人登记”做试点字段，冲突升级路径作为待验证假设，找顾明岚和傅景对齐后再定。你能说明冲突主要出在版本不一致还是责任归属不清吗？",
+      "at": "2026-11-10T14:20:13.491Z",
+      "factIds": [
+        "dlg-trade-documents-f24",
+        "dlg-trade-documents-f25"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "224332c3-d645-4195-8fa9-09d835a54dbb",
+        "at": "2026-11-10T14:20:13.491Z",
+        "durationMs": 2853,
+        "usage": {
+          "prompt_tokens": 1679,
+          "completion_tokens": 269,
+          "total_tokens": 1948
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "c6856e41-38c4-4e62-96f2-e1e35a301f14",
+            "at": "2026-11-10T14:20:10.638Z",
+            "durationMs": 2665,
+            "usage": {
+              "prompt_tokens": 1603,
+              "completion_tokens": 251,
+              "total_tokens": 1854
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "224332c3-d645-4195-8fa9-09d835a54dbb",
+            "at": "2026-11-10T14:20:13.491Z",
+            "durationMs": 2853,
+            "usage": {
+              "prompt_tokens": 1679,
+              "completion_tokens": 269,
+              "total_tokens": 1948
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ff01ea06-a0e0-4739-b67f-5da404d27883",
+          "at": "2026-11-10T14:20:07.973Z",
+          "durationMs": 1629,
+          "usage": {
+            "prompt_tokens": 1153,
+            "completion_tokens": 33,
+            "total_tokens": 1186
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-37",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "系统故障或接口中断时怎么办？",
+      "at": "2026-11-10T14:21:05.799Z"
+    },
+    {
+      "id": "turn-38",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "故障处置我这边有明确口径：读取失败时保留上次代理单证包快照并标记时间，提示人工核查，不编造最新状态，也不悄悄重试业务动作[dlg-trade-documents-f35]。这条是我能承诺的降级底线，落地由我负责。\n\n但要注意，试点本身只开放脱敏只读导出，写回、外部消息和执行接口都不开放[dlg-trade-documents-f32]，所以中断时不存在\"系统自动补动作\"这条路，只能靠人工核查接住。\n\n还有两点尚未核实：一是快照保留多久、谁有权查看，二是中断多久算异常、要不要通知客户侧。这两条涉及责任边界，需要和唐映秋对交接清单、和傅景确认审核口径，我不越权定。建议把\"中断时长分级+人工核查责任人\"写进试点方案，作为待验证假设，由顾明岚拍板。",
+      "at": "2026-11-10T14:21:05.799Z",
+      "factIds": [
+        "dlg-trade-documents-f35",
+        "dlg-trade-documents-f32"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "0b22227f-9c6d-44fe-a4f3-33c403196cc5",
+        "at": "2026-11-10T14:21:05.799Z",
+        "durationMs": 2467,
+        "usage": {
+          "prompt_tokens": 1249,
+          "completion_tokens": 228,
+          "total_tokens": 1477
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "f37a2883-08a1-4ce2-8d2f-c1d0eba8e953",
+          "at": "2026-11-10T14:21:03.332Z",
+          "durationMs": 1409,
+          "usage": {
+            "prompt_tokens": 790,
+            "completion_tokens": 24,
+            "total_tokens": 814
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-39",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "数据多久更新，过期信息如何识别？",
+      "at": "2026-11-10T14:21:26.904Z"
+    },
+    {
+      "id": "turn-40",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "更新节奏我这边没有可引用的同步频率事实，尚未核实，不能给具体间隔。我能确认的是更新规则：更新代理单证包时同时记录业务发生时间和系统接收时间，过期来源不能覆盖已确认的新版本[dlg-trade-documents-f34]。所以识别过期信息靠双时间戳比对，而不是靠\"多久同步一次\"来判断。\n\n过期来源的拦截逻辑要落到只读导出侧，前提是字段白名单里包含这两个时间字段，这需要书面确认。另外，过期判定阈值（业务时间与接收时间差多少算过期）目前没有依据，属于待验证假设，建议由顾明岚和傅景定口径，我只负责实现和故障处置。\n\n顺带问一句：你说的\"过期信息\"是指来源版本过期，还是指同步延迟导致的状态滞后？这两种在数据关联上的处理方式不一样，需要你先澄清，我再判断只读集成能不能覆盖。",
+      "at": "2026-11-10T14:21:26.904Z",
+      "factIds": [
+        "dlg-trade-documents-f34"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "73f64cd3-628b-4238-ad24-435784fe6189",
+        "at": "2026-11-10T14:21:26.904Z",
+        "durationMs": 2252,
+        "usage": {
+          "prompt_tokens": 1499,
+          "completion_tokens": 217,
+          "total_tokens": 1716
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "62b50e02-6362-4769-a851-b2b0d0f1347d",
+          "at": "2026-11-10T14:21:24.652Z",
+          "durationMs": 943,
+          "usage": {
+            "prompt_tokens": 1044,
+            "completion_tokens": 24,
+            "total_tokens": 1068
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-41",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "数据有哪些字段、口径或质量问题？",
+      "at": "2026-11-10T14:21:56.327Z"
+    },
+    {
+      "id": "turn-42",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r3",
+      "text": "字段口径我这边能确认的是：需要对齐的关键字段为商品演练编码、数量、单位、金额、币种与版本，并且缺失值与未确认值必须区分开[dlg-trade-documents-f31]。这一点直接影响只读导出的字段白名单设计——如果导出侧把缺失和未确认混成一个空值，下游就没法判断该不该人工复核，所以白名单里这两类状态要分开表达。\n\n质量检查的口径是：先核对代理单证包的重复编号、空时间、版本断链与单位差异，问题记录必须保留原行[dlg-trade-documents-f33]。保留原行这条对集成很关键，意味着只读导出不能做去重清洗后再给下游，否则复核时追不回来源。\n\n至于具体脏数据的最近实例、各系统字段命名差异有多大，我手上没有可引用事实，尚未核实。建议先拿这两条口径和唐映秋对责任清单、和傅景确认复核边界，再定导出字段。",
+      "at": "2026-11-10T14:21:56.327Z",
+      "factIds": [
+        "dlg-trade-documents-f31",
+        "dlg-trade-documents-f33"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "f05f7a07-7572-4071-b0fb-e49651f3cd4a",
+        "at": "2026-11-10T14:21:56.327Z",
+        "durationMs": 2446,
+        "usage": {
+          "prompt_tokens": 1821,
+          "completion_tokens": 244,
+          "total_tokens": 2065
+        },
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "b2d57613-6c13-41cd-8d1b-835238badf0a",
+            "at": "2026-11-10T14:21:53.881Z",
+            "durationMs": 2841,
+            "usage": {
+              "prompt_tokens": 1745,
+              "completion_tokens": 261,
+              "total_tokens": 2006
+            }
+          },
+          {
+            "provider": "DeepSeek",
+            "model": "deepseek-flash",
+            "requestId": "f05f7a07-7572-4071-b0fb-e49651f3cd4a",
+            "at": "2026-11-10T14:21:56.327Z",
+            "durationMs": 2446,
+            "usage": {
+              "prompt_tokens": 1821,
+              "completion_tokens": 244,
+              "total_tokens": 2065
+            }
+          }
+        ],
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "5c5fbde7-bea0-4aed-b082-a8ab840685f1",
+          "at": "2026-11-10T14:21:51.040Z",
+          "durationMs": 1322,
+          "usage": {
+            "prompt_tokens": 1286,
+            "completion_tokens": 24,
+            "total_tokens": 1310
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-43",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "记录保留多久，删除和留存如何处理？",
+      "at": "2026-11-10T14:22:19.600Z"
+    },
+    {
+      "id": "turn-44",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "留存这块我目前只有两条可依据的口径：代理单证包要留存原始版本、修订原因与确认人，练习结束按项目约定删除虚构个人字段 [dlg-trade-documents-f43]；审计侧要能看到谁查过、用的哪个版本、提了什么建议、谁确认，访问记录不能只留最终摘要 [dlg-trade-documents-f45]。\n\n但具体保留多久、到期怎么触发删除、删除由谁审批、删除后审计链怎么闭合，我手上没有依据，尚未核实，不能给数字。这直接影响我的验收判断：如果保留期限和删除规则没定，我就无法确认「结论可追溯到授权人」这条能不能成立。\n\n建议把保留期限、删除触发与审批人、删除后审计留痕方式列成待验证假设，由顾明岚定业务口径、唐映秋落资料责任，我这边只负责确认它可被审计验证。你能先明确这块归谁拍板吗？",
+      "at": "2026-11-10T14:22:19.600Z",
+      "factIds": [
+        "dlg-trade-documents-f43",
+        "dlg-trade-documents-f45"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "e9aff2d6-a7c5-49e7-a915-d17dd72def8b",
+        "at": "2026-11-10T14:22:19.600Z",
+        "durationMs": 2639,
+        "usage": {
+          "prompt_tokens": 1208,
+          "completion_tokens": 237,
+          "total_tokens": 1445
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "3af934c8-266e-4804-a127-52c36ea05ad4",
+          "at": "2026-11-10T14:22:16.961Z",
+          "durationMs": 932,
+          "usage": {
+            "prompt_tokens": 744,
+            "completion_tokens": 24,
+            "total_tokens": 768
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-45",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:22:33.311Z"
+    },
+    {
+      "id": "turn-46",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:22:33.311Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "a4d5b1b6-38b6-4a46-815c-5601d5421db3",
+        "at": "2026-11-10T14:22:33.310Z",
+        "durationMs": 2037,
+        "usage": {
+          "prompt_tokens": 1463,
+          "completion_tokens": 231,
+          "total_tokens": 1694
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "1e2d2be2-2348-4827-a304-9c943899dfe5",
+          "at": "2026-11-10T14:22:31.274Z",
+          "durationMs": 1181,
+          "usage": {
+            "prompt_tokens": 1006,
+            "completion_tokens": 51,
+            "total_tokens": 1057
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-47",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:22:50.439Z"
+    },
+    {
+      "id": "turn-48",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:22:50.439Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "6813a53b-f2e6-4602-87b3-c7b4b252c654",
+        "at": "2026-11-10T14:22:50.439Z",
+        "durationMs": 1704,
+        "usage": {
+          "prompt_tokens": 1719,
+          "completion_tokens": 231,
+          "total_tokens": 1950
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "b7ad5845-8bd1-40a1-bc8c-27832a3e4452",
+          "at": "2026-11-10T14:22:48.734Z",
+          "durationMs": 1073,
+          "usage": {
+            "prompt_tokens": 1262,
+            "completion_tokens": 51,
+            "total_tokens": 1313
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-49",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:22:58.525Z"
+    },
+    {
+      "id": "turn-50",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:22:58.525Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "fc1e5184-a539-44bc-b8fa-70f616256d3d",
+        "at": "2026-11-10T14:22:58.525Z",
+        "durationMs": 1390,
+        "usage": {
+          "prompt_tokens": 1975,
+          "completion_tokens": 231,
+          "total_tokens": 2206
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "2dacfe5d-e4a5-4b7c-a604-3ba89edd814f",
+          "at": "2026-11-10T14:22:57.135Z",
+          "durationMs": 969,
+          "usage": {
+            "prompt_tokens": 1518,
+            "completion_tokens": 51,
+            "total_tokens": 1569
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-51",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "怎么验收成功？试点标准是什么？",
+      "at": "2026-11-10T14:23:07.757Z"
+    },
+    {
+      "id": "turn-52",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "验收我认两条硬口径：一是50票样本的预设差异必须全部定位到原单据字段，二是每条结果要关联来源和人工复核记录 [dlg-trade-documents-f42]；同时正式结论须由授权人员确认、跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。这三条缺一条我就不签验收。\n\n试点标准我这边只给方向：试点范围内异常可拦截、结论可追溯到授权人、越权访问为零，才具备放量讨论的前提。但试点覆盖多少票、哪些单证类型、由谁拍板范围，属于顾明岚的业务决策，我无权定，尚未核实。\n\n需要你澄清一点：50票样本由谁抽取、预设差异清单谁维护、人工复核记录以什么形式留存？这直接决定我能否把它当验收证据。建议先出一份样本与复核记录清单，我据此判断可验证性。",
+      "at": "2026-11-10T14:23:07.757Z",
+      "factIds": [
+        "dlg-trade-documents-f42",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "3d259bc7-23d0-4e22-9b0c-3ada552b872f",
+        "at": "2026-11-10T14:23:07.757Z",
+        "durationMs": 2337,
+        "usage": {
+          "prompt_tokens": 2233,
+          "completion_tokens": 228,
+          "total_tokens": 2461
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "20a2fd10-e1a1-406a-8934-e4c6a0717065",
+          "at": "2026-11-10T14:23:05.420Z",
+          "durationMs": 1166,
+          "usage": {
+            "prompt_tokens": 1774,
+            "completion_tokens": 42,
+            "total_tokens": 1816
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-53",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:23:25.319Z"
+    },
+    {
+      "id": "turn-54",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:23:25.319Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "b44ea8b9-214b-4700-8dd3-23a4b5a83c0d",
+        "at": "2026-11-10T14:23:25.319Z",
+        "durationMs": 1704,
+        "usage": {
+          "prompt_tokens": 2484,
+          "completion_tokens": 231,
+          "total_tokens": 2715
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "fdaba9cb-e1b4-48e1-8bb7-1b88fdf79952",
+          "at": "2026-11-10T14:23:23.615Z",
+          "durationMs": 1262,
+          "usage": {
+            "prompt_tokens": 2027,
+            "completion_tokens": 60,
+            "total_tokens": 2087
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-55",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:23:53.084Z"
+    },
+    {
+      "id": "turn-56",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:23:53.084Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "ce0d4460-113b-4b01-862c-69ee01fb4bd9",
+        "at": "2026-11-10T14:23:53.084Z",
+        "durationMs": 1806,
+        "usage": {
+          "prompt_tokens": 2389,
+          "completion_tokens": 231,
+          "total_tokens": 2620
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "8486ffaa-dada-4e05-a559-929e8fc2638f",
+          "at": "2026-11-10T14:23:51.278Z",
+          "durationMs": 886,
+          "usage": {
+            "prompt_tokens": 1932,
+            "completion_tokens": 60,
+            "total_tokens": 1992
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-57",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:24:19.012Z"
+    },
+    {
+      "id": "turn-58",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:24:19.012Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "d36054d1-e632-49c6-92b3-3dd4088bd1b6",
+        "at": "2026-11-10T14:24:19.012Z",
+        "durationMs": 1596,
+        "usage": {
+          "prompt_tokens": 2382,
+          "completion_tokens": 231,
+          "total_tokens": 2613
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "df993763-ccea-4cd1-bf4e-5978caf333c1",
+          "at": "2026-11-10T14:24:17.416Z",
+          "durationMs": 1176,
+          "usage": {
+            "prompt_tokens": 1925,
+            "completion_tokens": 51,
+            "total_tokens": 1976
+          },
+          "attemptCount": 1
+        }
+      }
+    },
+    {
+      "id": "turn-59",
+      "speaker": "user",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "有哪些安全、合规或业务红线？",
+      "at": "2026-11-10T14:25:04.614Z"
+    },
+    {
+      "id": "turn-60",
+      "speaker": "character",
+      "characterId": "dlg-trade-documents-r4",
+      "text": "红线我只能给方向，定稿要跟顾明岚、唐映秋对齐。目前有依据的是两条：一是无法确认代理单证包版本或关键字段时，必须进人工处理队列，必要时暂停试点，不能默认通过 [dlg-trade-documents-f44]；二是所有正式结论须由授权人员确认，跨企业资料只按明确授权范围访问 [dlg-trade-documents-f41]。据此我倾向把「版本或关键字段存疑的放行」和「跨企业资料的对外结论」列为不可自动化、必须人工审批，但这只是待验证假设。\n\n这直接压在我的验收口径上：异常可拦截、结论可追溯到授权人、越权访问为零，三条缺一条我就不认验收。你问的红线清单如果还要覆盖留存期限、删除审批这类，我手上没有依据，尚未核实。建议先明确红线由谁拍板、审批清单谁维护，我再判断能否作为验收证据。",
+      "at": "2026-11-10T14:25:04.614Z",
+      "factIds": [
+        "dlg-trade-documents-f44",
+        "dlg-trade-documents-f41"
+      ],
+      "mode": "在线模型对话",
+      "audit": {
+        "provider": "DeepSeek",
+        "model": "deepseek-flash",
+        "requestId": "3e6097e5-4d05-4f3c-8206-dcc32b3d6902",
+        "at": "2026-11-10T14:25:04.614Z",
+        "durationMs": 1941,
+        "usage": {
+          "prompt_tokens": 2382,
+          "completion_tokens": 231,
+          "total_tokens": 2613
+        },
+        "attemptCount": 1,
+        "selection": {
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "requestId": "ffa607c3-2e3e-40bd-b15a-fa62caec0dac",
+          "at": "2026-11-10T14:25:02.673Z",
+          "durationMs": 1455,
+          "usage": {
+            "prompt_tokens": 1925,
+            "completion_tokens": 51,
+            "total_tokens": 1976
+          },
+          "attemptCount": 1
+        }
+      }
+    }
+  ],
+  "methodContext": {
+    "buyer": "顾明岚",
+    "operator": "林亦舟"
+  },
+  "framework": "基于 fde-simulation 的 workflow-decomposition、outcome-risk-matrix 与 4-source-convergence 框架进行需求归纳。",
+  "analysis": {
+    "summary": "围绕代理单证包，已采集事实可支撑一条主线：在客户提供→单证检查→人工确认→委托作业→归档链路中，先定位交接点瓶颈，以只读、可追溯、人工确认为边界做小范围试点。当前证据显示三类可验证缺口：一是版本与字段口径（商品编码、数量、单位、金额、币种、版本，缺失与未确认需区分）；二是交接与责任登记（版本、未结项、截止时间、确认人）；三是异常兜底与审计留痕（无法确认即进人工队列、访问与确认记录不可只留摘要）。价值上，减少重复核对与返工有现场诉求；不可逆风险集中在越权访问、默认放行与对外结论，应优先于效率类切入点。需注意：演练基线（每月220票、每票42分钟）为虚构样本，不能作为真实收益依据；保留期限、删除审批、过期阈值、同步频率均无事实，不得编造。",
+    "hypotheses": [
+      {
+        "title": "以“缺项清单+来源定位”替代泛化摘要，作为试点首要交付物",
+        "owner": "物流单证专员（林亦舟）与业务负责人（顾明岚）共同确认",
+        "priority": "P0",
+        "reasoning": "现场明确不需要长摘要，而是一页缺项清单和对应来源位置（f15）；痛点是发票、装箱单与订单的商品名称和单位不一致（f10），且需记录发生节点与受影响对象。若交付物不能定位到原单据字段，验收口径（f42）无法成立。不确定处：缺项清单的字段范围与呈现形式尚未与审核方对齐。",
+        "nextStep": "用合成发票、装箱单、订单各若干份，人工产出缺项清单样张，交傅景按“差异定位到原单据字段+关联来源”核对；确认清单字段与来源标注格式后再定试点范围。",
+        "evidenceIds": [
+          "dlg-trade-documents-f15",
+          "dlg-trade-documents-f10",
+          "dlg-trade-documents-f42",
+          "dlg-trade-documents-f31"
+        ]
+      },
+      {
+        "title": "版本有效期与确认状态双条件管理，禁止以文件名判断最新版本",
+        "owner": "项目流程协调员（唐映秋）",
+        "priority": "P0",
+        "reasoning": "已明确采用版本有效期与确认状态两个条件、作废保留原因、不靠文件名猜版本（f24）；交接须列最新版本、未确认事项与截止时间（f23）；模拟异常正是客户更新装箱数量未同步发票版本（f11）。不确定处：版本断链的具体判定规则与过期阈值无事实依据。",
+        "nextStep": "抽取若干组合成版本记录，按双条件人工标注“有效/作废/待确认”，与唐映秋核对判定一致性；过期阈值由顾明岚与傅景另行定口径，未定前不写入规则。",
+        "evidenceIds": [
+          "dlg-trade-documents-f24",
+          "dlg-trade-documents-f23",
+          "dlg-trade-documents-f11",
+          "dlg-trade-documents-f33"
+        ]
+      },
+      {
+        "title": "交接点登记接收人、版本与未结项，作为可追溯性的最小载体",
+        "owner": "项目流程协调员（唐映秋）与各交接接收人",
+        "priority": "P1",
+        "reasoning": "流程协调责任是跟踪五个环节并在每次交接记录接收人、版本与未结项（f20）；跨团队变更需登记责任人，未确认项不能归到对方名下（f25）；一线可提交变更但正式确认由业务负责人完成（f22）。不确定处：各交接点当前实际记录完整度未采集。",
+        "nextStep": "选一条真实链路做交接记录现状盘点（只读观察，不改流程），统计缺失接收人或未结项的比例；据此判断登记模板是否需调整，再由顾明岚确认试点环节。",
+        "evidenceIds": [
+          "dlg-trade-documents-f20",
+          "dlg-trade-documents-f25",
+          "dlg-trade-documents-f22"
+        ]
+      },
+      {
+        "title": "异常与存疑一律进人工队列，不默认通过，作为不可逆风险的首要控制点",
+        "owner": "审核与质量负责人（傅景）",
+        "priority": "P0",
+        "reasoning": "无法确认版本或关键字段时须进人工处理队列、必要时暂停试点、不能默认通过（f44）；正式结论须授权人员确认、跨企业资料按授权范围访问（f41）；系统建议不能覆盖原值或省略确认（f14）。这是不可逆风险，应优先于效率改进。不确定处：人工队列的责任人与响应时限未定。",
+        "nextStep": "在合成样本中植入若干“版本存疑/字段缺失”情形，验证是否全部被拦截并进入人工队列；由傅景确认拦截清单与放行权限，顾明岚拍板暂停试点的触发条件。",
+        "evidenceIds": [
+          "dlg-trade-documents-f44",
+          "dlg-trade-documents-f41",
+          "dlg-trade-documents-f14"
+        ]
+      },
+      {
+        "title": "只读脱敏导出+双时间戳，作为数据关联的试点边界",
+        "owner": "数字化工程师（秦芮）",
+        "priority": "P1",
+        "reasoning": "试点只开放脱敏只读导出，写回、外部消息与执行接口均不开放（f32）；更新时同时记录业务发生时间与系统接收时间，过期来源不能覆盖已确认新版本（f34）；读取失败保留快照并标记时间、提示人工核查（f35）；代理单证包尚无统一关联编号（f30）。不确定处：快照保留时长与查看权限、中断分级均未核实。",
+        "nextStep": "在演练环境做一次只读导出字段白名单核对（含两个时间字段与缺失/未确认区分），并模拟一次读取失败验证快照与人工提示；快照保留与中断分级列为待确认项，不写入实现。",
+        "evidenceIds": [
+          "dlg-trade-documents-f32",
+          "dlg-trade-documents-f34",
+          "dlg-trade-documents-f35",
+          "dlg-trade-documents-f30"
+        ]
+      },
+      {
+        "title": "审计留痕须覆盖查询人、版本、建议与确认人，支撑验收证据链",
+        "owner": "审核与质量负责人（傅景）",
+        "priority": "P1",
+        "reasoning": "审计要看到谁查过、用哪个版本、提什么建议、谁确认，访问记录不能只留最终摘要（f45）；留存原始版本、修订原因与确认人（f43）；验收要求每条结果关联来源与人工复核记录（f42）。不确定处：保留期限、删除触发与审批人无事实，删除后审计链闭合方式未定。",
+        "nextStep": "用合成样本走一遍“查询—建议—确认”记录，检查能否还原到授权人；保留期限与删除审批由顾明岚定业务口径、唐映秋落资料责任，未定前不作为验收通过依据。",
+        "evidenceIds": [
+          "dlg-trade-documents-f45",
+          "dlg-trade-documents-f43",
+          "dlg-trade-documents-f42"
+        ]
+      }
+    ],
+    "followUps": [
+      "50票样本由谁抽取、预设差异清单由谁维护、人工复核记录以什么形式留存？（向傅景、顾明岚）",
+      "代理单证包的保留期限、删除触发条件与审批人分别由谁拍板？删除后审计链如何闭合？",
+      "“过期信息”指来源版本过期还是同步延迟导致的状态滞后？两者处理方式是否不同？（向秦芮澄清）",
+      "读取失败时快照保留多久、谁有权查看？中断多久算异常、是否需通知客户侧？",
+      "各交接点当前记录接收人、版本与未结项的完整度如何？能否先做一次只读现状盘点？",
+      "缺项清单的字段范围与来源标注格式，能否先出样张供审核方核对？",
+      "一线提交变更与业务负责人正式确认之间，平均等待时长与积压情况如何？",
+      "试点四周、两名骨干、每周不超过四小时的约束下，优先覆盖哪类单证与哪个交接环节？"
+    ],
+    "limitations": "本分析仅基于已采集的29条事实（覆盖率29/36），未采集部分不得推断。演练基线（每月220票、每票42分钟）为虚构样本，不代表真实经营数据，不能用于收益测算。保留期限、删除审批、过期阈值、同步频率、快照权限、中断分级均无事实依据，相关条目仅列为待确认，不构成规则或配置建议。访谈材料中傅景部分回答重复，未提供新增事实。四类来源材料仅用于定位问题，未做四视角收敛；调查覆盖率不代表验收通过，所有假设均需人工确认与最小验证后方可进入试点。",
+    "audit": {
+      "provider": "DeepSeek",
+      "model": "deepseek-flash",
+      "requestId": "ddbaa85c-94a3-4429-8a8c-d4b9560b7e10",
+      "at": "2026-11-10T14:44:08.891Z",
+      "durationMs": 12361,
+      "usage": {
+        "prompt_tokens": 6975,
+        "completion_tokens": 1836,
+        "total_tokens": 8811
+      },
+      "attemptCount": 1
+    }
+  },
+  "methodology": {
+    "version": 1,
+    "guide": [
+      {
+        "id": "workflow-decomposition",
+        "name": "业务流程拆解",
+        "file": "frameworks/workflow-decomposition.md",
+        "question": "问题发生在哪一步，为什么要这样划分智能体？",
+        "steps": [
+          "先画人工现状泳道，写出触发、输入、8–15个处理步骤、交接和异常。",
+          "区分判断点与执行点；按使用的数据、权限、模型能力与失败方式组合执行步骤。",
+          "在不可逆动作前设置确定性校验；为低置信、缺资料、冲突和越权安排具名人工接收人。"
+        ],
+        "output": "现状流程 → 失败方式 → 智能体/工具边界 → 校验与人工升级路径"
+      },
+      {
+        "id": "outcome-risk-matrix",
+        "name": "业务结果与不可逆风险矩阵",
+        "file": "frameworks/outcome-risk-matrix.md",
+        "question": "多个需求中，先做哪个最小可验证方案？",
+        "steps": [
+          "列出3–5个候选切入点，分别说明改善的业务结果、现状基线和投入。",
+          "评估失败何时被谁看见、能否在损害前拦截、是否可以撤销；不要把模型置信度等同于业务风险。",
+          "优先选择高价值、可拦截且可恢复的切入点；高风险需硬约束和责任人否决权，价值或风险未知先补证据。"
+        ],
+        "output": "候选方案 → 价值/风险比较 → 选择与暂缓理由 → 验收指标与停止条件"
+      },
+      {
+        "id": "4-source-convergence",
+        "name": "四来源收敛",
+        "file": "frameworks/4-source-convergence.md",
+        "question": "谁说要做，哪里真的坏了，范围允许什么，技术是否可行？",
+        "steps": [
+          "Buyer：核实业务目标、预算、优先级和决定权；Operator：用最近一单还原真实操作和失败位置。",
+          "Brief：核对书面目标、范围、时间和排除项；Industry：寻找可比技术实践，并核实本项目的数据与接口差异。",
+          "检查四个视角是否指向同一瓶颈。分歧保留在问题清单：一线帮助定位故障，决策者确认价值，Brief约束范围，行业证据帮助判断可行性。"
+        ],
+        "output": "四视角陈述与来源 → 收敛/分歧 → 待核实问题 → 有边界的需求假设"
+      }
+    ],
+    "sources": [
+      {
+        "id": "buyer",
+        "name": "Buyer · 业务决策者",
+        "statement": "顾明岚",
+        "evidenceIds": [
+          "dlg-trade-documents-f01",
+          "dlg-trade-documents-f00",
+          "dlg-trade-documents-f02",
+          "dlg-trade-documents-f03"
+        ],
+        "status": "已采集角色陈述，目标和预算仍待确认"
+      },
+      {
+        "id": "brief",
+        "name": "Brief · 书面需求",
+        "statement": "【演练假设】围绕代理单证包，团队希望减少重复核对并提高服务可追溯性。请访谈不同角色，核实问题与可行的试点范围。",
+        "evidenceIds": [],
+        "status": "当前只有场景开场；书面Brief原文与版本待补"
+      },
+      {
+        "id": "industry",
+        "name": "Industry · 行业可行性",
+        "statement": "需要可比技术案例、数据条件和接口能力的核验材料。企业业务介绍不能证明技术可行。",
+        "evidenceIds": [],
+        "status": "待补行业实践与本项目适用性验证"
+      },
+      {
+        "id": "operator",
+        "name": "Operator · 一线使用者",
+        "statement": "林亦舟",
+        "evidenceIds": [
+          "dlg-trade-documents-f11",
+          "dlg-trade-documents-f10",
+          "dlg-trade-documents-f12",
+          "dlg-trade-documents-f13",
+          "dlg-trade-documents-f14",
+          "dlg-trade-documents-f15"
+        ],
+        "status": "已采集现场陈述，仍需样本与操作观察核实"
+      }
+    ],
+    "trace": [
+      {
+        "id": "REQ-1",
+        "title": "以“缺项清单+来源定位”替代泛化摘要，作为试点首要交付物",
+        "evidenceIds": [
+          "dlg-trade-documents-f15",
+          "dlg-trade-documents-f10",
+          "dlg-trade-documents-f42",
+          "dlg-trade-documents-f31"
+        ],
+        "derivation": "现场明确不需要长摘要，而是一页缺项清单和对应来源位置（f15）；痛点是发票、装箱单与订单的商品名称和单位不一致（f10），且需记录发生节点与受影响对象。若交付物不能定位到原单据字段，验收口径（f42）无法成立。不确定处：缺项清单的字段范围与呈现形式尚未与审核方对齐。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "用合成发票、装箱单、订单各若干份，人工产出缺项清单样张，交傅景按“差异定位到原单据字段+关联来源”核对；确认清单字段与来源标注格式后再定试点范围。"
+      },
+      {
+        "id": "REQ-2",
+        "title": "版本有效期与确认状态双条件管理，禁止以文件名判断最新版本",
+        "evidenceIds": [
+          "dlg-trade-documents-f24",
+          "dlg-trade-documents-f23",
+          "dlg-trade-documents-f11",
+          "dlg-trade-documents-f33"
+        ],
+        "derivation": "已明确采用版本有效期与确认状态两个条件、作废保留原因、不靠文件名猜版本（f24）；交接须列最新版本、未确认事项与截止时间（f23）；模拟异常正是客户更新装箱数量未同步发票版本（f11）。不确定处：版本断链的具体判定规则与过期阈值无事实依据。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "抽取若干组合成版本记录，按双条件人工标注“有效/作废/待确认”，与唐映秋核对判定一致性；过期阈值由顾明岚与傅景另行定口径，未定前不写入规则。"
+      },
+      {
+        "id": "REQ-3",
+        "title": "交接点登记接收人、版本与未结项，作为可追溯性的最小载体",
+        "evidenceIds": [
+          "dlg-trade-documents-f20",
+          "dlg-trade-documents-f25",
+          "dlg-trade-documents-f22"
+        ],
+        "derivation": "流程协调责任是跟踪五个环节并在每次交接记录接收人、版本与未结项（f20）；跨团队变更需登记责任人，未确认项不能归到对方名下（f25）；一线可提交变更但正式确认由业务负责人完成（f22）。不确定处：各交接点当前实际记录完整度未采集。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "选一条真实链路做交接记录现状盘点（只读观察，不改流程），统计缺失接收人或未结项的比例；据此判断登记模板是否需调整，再由顾明岚确认试点环节。"
+      },
+      {
+        "id": "REQ-4",
+        "title": "异常与存疑一律进人工队列，不默认通过，作为不可逆风险的首要控制点",
+        "evidenceIds": [
+          "dlg-trade-documents-f44",
+          "dlg-trade-documents-f41",
+          "dlg-trade-documents-f14"
+        ],
+        "derivation": "无法确认版本或关键字段时须进人工处理队列、必要时暂停试点、不能默认通过（f44）；正式结论须授权人员确认、跨企业资料按授权范围访问（f41）；系统建议不能覆盖原值或省略确认（f14）。这是不可逆风险，应优先于效率改进。不确定处：人工队列的责任人与响应时限未定。",
+        "priority": "P0",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "在合成样本中植入若干“版本存疑/字段缺失”情形，验证是否全部被拦截并进入人工队列；由傅景确认拦截清单与放行权限，顾明岚拍板暂停试点的触发条件。"
+      },
+      {
+        "id": "REQ-5",
+        "title": "只读脱敏导出+双时间戳，作为数据关联的试点边界",
+        "evidenceIds": [
+          "dlg-trade-documents-f32",
+          "dlg-trade-documents-f34",
+          "dlg-trade-documents-f35",
+          "dlg-trade-documents-f30"
+        ],
+        "derivation": "试点只开放脱敏只读导出，写回、外部消息与执行接口均不开放（f32）；更新时同时记录业务发生时间与系统接收时间，过期来源不能覆盖已确认新版本（f34）；读取失败保留快照并标记时间、提示人工核查（f35）；代理单证包尚无统一关联编号（f30）。不确定处：快照保留时长与查看权限、中断分级均未核实。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "在演练环境做一次只读导出字段白名单核对（含两个时间字段与缺失/未确认区分），并模拟一次读取失败验证快照与人工提示；快照保留与中断分级列为待确认项，不写入实现。"
+      },
+      {
+        "id": "REQ-6",
+        "title": "审计留痕须覆盖查询人、版本、建议与确认人，支撑验收证据链",
+        "evidenceIds": [
+          "dlg-trade-documents-f45",
+          "dlg-trade-documents-f43",
+          "dlg-trade-documents-f42"
+        ],
+        "derivation": "审计要看到谁查过、用哪个版本、提什么建议、谁确认，访问记录不能只留最终摘要（f45）；留存原始版本、修订原因与确认人（f43）；验收要求每条结果关联来源与人工复核记录（f42）。不确定处：保留期限、删除触发与审批人无事实，删除后审计链闭合方式未定。",
+        "priority": "P1",
+        "decision": "候选需求；需用结果与不可逆风险矩阵比较，P0/P1/P2不等于已完成价值风险评分。",
+        "verification": "用合成样本走一遍“查询—建议—确认”记录，检查能否还原到授权人；保留期限与删除审批由顾明岚定业务口径、唐映秋落资料责任，未定前不作为验收通过依据。"
+      }
+    ],
+    "conclusion": "先从已采集事实形成问题假设，再约定业务结果、范围、失败控制和验收。缺少的来源标记待补，不能把六人访谈完整率当作四来源收敛或需求确认。"
+  },
+  "handoff": {
+    "reportId": "REPORT-673dfec8-1337-4ad0-b077-8e2b0d60cc53",
+    "version": 2,
+    "sourceStage": "opportunity",
+    "targetStage": "discovery",
+    "href": "/group-training?project=dlg-trade-documents&attemptId=883ed059-c876-46f8-b51f-e7c7e077b69e&stage=discovery",
+    "stageHref": "/group-training?project=dlg-trade-documents&attemptId=883ed059-c876-46f8-b51f-e7c7e077b69e&stage=opportunity"
+  }
+}
